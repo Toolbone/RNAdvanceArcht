@@ -1,4 +1,4 @@
-# 🚀 React Native Advance Architecture - August 2020
+# React Native Advance Architecture
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.62.2-green.svg)](https://facebook.github.io/react-native/)
 [![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.1-blue.svg)](https://reactnavigation.org/)
@@ -6,15 +6,7 @@
 React NativeFeature Boilerplate is a starting point for React Native application. This project is configured with redux, redux saga
 and redux persist. Uses the latest version of react-navigation (v5)
 
-
-## Scalability Factor
-
-This Architecture is optimised for large scale projects. If you are beginner who just started using react native, I would
-suggest starting with a type based architecture and slowly switching to this architecture.
-
-[React-Native-BoilerPlate](https://github.com/victorkvarghese/react-native-boilerplate) for beginners.
-
-## Features
+## Libraries
 
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [React Navigation](https://reactnavigation.org/) with [Authentication flow](https://reactnavigation.org/docs/auth-flow) baked in.
@@ -40,17 +32,16 @@ suggest starting with a type based architecture and slowly switching to this arc
   - `/api` - Api module class. Each file will be feature based like ProductAPI, LoginAPI etc
   - `/components` - universal shared components used by others.
   - `/config` - Universal styles,images,metrics etc..
-  - `/features` - Config files
+  - `/screens` - Config files
     - `login`- Each folder will be a feature like this.
       - `reducers` - Reducer associated with this feature [Mostly one, can be multiple]
       - `sagas` - Sagas related with this particular feature [can have single or muliple sagas associated]
       - `selectors` - selectors associated with feature
-      - `components` - Components associated with this feature.
       - `containers` - Containers associated with this feature [**Container - Component Structure**]
   - `/lib` - lib helper files
-  - `/navigation` - All naviagtion related stuff including helpers functions and navigation stack
+  - `/navigation` - All navigation related stuff including helpers functions and navigation stack
     - `NavigationService.js` - Service class for navigation - can be used without using props
-    - `NavigationStack.js` - Stack to define naviagtion. you can split things further if needed
+    - `NavigationStack.js` - Stack to define navigation. you can split things further if needed.
   - `/store` - Includes everything you need to set up store.
     - `reducers` - Combines all feature based reducers
     - `sagas` - Combines all feature based sagas
