@@ -49,7 +49,7 @@ and redux persist. Uses the latest version of react-navigation (v5)
 
 ## Getting Started
 
-1. Clone this repo, `git clone https://github.com/victorkvarghese/react-native-boilerplate.git <your project name>`
+1. Clone this repo, `git clone https://github.com/Toolbone/RNAdvanceArcht.git <your project name>`
 2. Go to project's root directory, `cd <your project name>`
 3. Remove `.git` folder, `rm -rf .git`
 4. Use [React Native Rename](https://github.com/junedomingo/react-native-rename) to update project name `$ npx react-native-rename <newName>`
