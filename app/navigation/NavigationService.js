@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-// NavigationConatiner is refered here - Check NavigationStack
 export const navigationRef = React.createRef();
 
 function navigate(name, params) {

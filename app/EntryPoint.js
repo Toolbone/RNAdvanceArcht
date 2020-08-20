@@ -22,7 +22,7 @@ const theme = {
   },
 };
 
-export default function Entrypoint() {
+export default function EntryPoint() {
   return (
     <Provider store={store}>
       <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
