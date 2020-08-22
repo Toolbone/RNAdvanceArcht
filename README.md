@@ -3,8 +3,8 @@
 [![React Native](https://img.shields.io/badge/React%20Native-v0.62.2-green.svg)](https://facebook.github.io/react-native/)
 [![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.1-blue.svg)](https://reactnavigation.org/)
 
-React NativeFeature Boilerplate is a starting point for React Native application. This project is configured with redux, redux saga
-and redux persist. Uses the latest version of react-navigation (v5)
+This project aims to act as a template for React Native. This project configured with redux, redux saga and redux persist. 
+Uses the latest version of react-navigation (v5)
 
 ## Libraries
 
@@ -28,16 +28,16 @@ and redux persist. Uses the latest version of react-navigation (v5)
 
 ## Project Structure
 
-- `/app` - Contains our React Native App codebase
+- `/app` - Contains React Native App codebase
   - `/api` - Api module class. Each file will be feature based like ProductAPI, LoginAPI etc
-  - `/components` - universal shared components used by others.
-  - `/config` - Universal styles,images,metrics etc..
-  - `/screens` - Config files
-    - `login`- Each folder will be a feature like this.
+  - `/components` - Universal shared containers, components are stand-alone and decoupled.
+  - `/config` - Universal styles,images,metrics etc...
+  - `/screens` - Feature level containers that holds the entire screen or page 
+    - `login`- Login Feature
       - `reducers` - Reducer associated with this feature [Mostly one, can be multiple]
       - `sagas` - Sagas related with this particular feature [can have single or muliple sagas associated]
-      - `selectors` - selectors associated with feature
-      - `containers` - Containers associated with this feature [**Container - Component Structure**]
+      - `selectors` - Selectors associated with the feature
+      - `widget` - Containers associated with the feature that has theme or project scheme 
   - `/lib` - lib helper files
   - `/navigation` - All navigation related stuff including helpers functions and navigation stack
     - `NavigationService.js` - Service class for navigation - can be used without using props
@@ -65,4 +65,4 @@ and redux persist. Uses the latest version of react-navigation (v5)
   - Open `ios/YourReactProject.xcworkspace` in Xcode
   - Hit `Run` after selecting the desired device
 
-9. Enjoy!!!
+9. All set!!!, you are ready to go!
