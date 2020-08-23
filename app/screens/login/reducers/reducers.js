@@ -2,22 +2,21 @@
  * handles login states in the app
  */
 import createReducer from 'app/lib/createReducer';
-import * as types from './types';
+import * as types from '../types';
 
 const initialState = {
   isLoggedIn: false,
   id: 0,
   token: '',
-  username: '',
+  email: '',
   password: '',
 };
 
-export let loginReducer: createReducer;
-loginReducer = createReducer(initialState, {
+export const loginReducer = createReducer(initialState, {
   [types.LOGIN_REQUEST](state, action) {
     return {
       ...state,
-      username: action.username,
+      email: action.email,
       password: action.password,
     };
   },

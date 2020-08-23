@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux';
 
 import { navigationRef } from './NavigationService';
 
-import Login from 'app/screens/login/containers';
-import Home from 'app/screens/home/containers';
+import Login from 'app/screens/login';
+import Home from 'app/screens/home';
 
 const Stack = createStackNavigator();
 

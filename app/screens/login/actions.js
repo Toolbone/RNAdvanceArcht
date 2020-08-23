@@ -18,8 +18,11 @@ export function loginFailed() {
 }
 
 export function onLoginResponse(response) {
+  console.log('*************************');
+  console.log(JSON.stringify(response));
   return {
     type: types.LOGIN_RESPONSE,
+    token: response.token,
     response,
   };
 }

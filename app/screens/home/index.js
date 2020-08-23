@@ -9,8 +9,7 @@ import styles from './styles';
 export default function Home() {
   const dispatch = useDispatch();
   const onLogout = () => dispatch(loginActions.logOut());
-  const token = useSelector(state => state.loginReducer.email);
-  const id = useSelector(state => state.loginReducer.id);
+  const token = useSelector(state => state.loginReducer.token);
 
   return (
     <View style={styles.container}>

@@ -32,7 +32,7 @@ const persistor = persistStore(store, persistConfig, () => {
   //   console.log('Test', store.getState());
 });
 const configureStore = () => {
-  return { persistStorage: persistor, store };
+  return { persistor, store };
 };
 
 sagaMiddleware.run(sagas);

@@ -1,10 +1,4 @@
-/* Redux saga class
- * logins the user into the app
- * requires username and password.
- * un - username
- * pwd - password
- */
-import { put, call, select } from 'redux-saga/effects';
+import { put, call, all } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 
 import { Alert } from 'react-native';
@@ -16,25 +10,30 @@ export default function* loginAsync(action) {
   yield put(loginActions.enableLoader());
 
   //how to call api
-  const response = yield call(loginUser, action.email, action.password);
+  const { response, error } = yield call(
+    loginUser,
+    action.email,
+    action.password,
+  );
   console.log('-----------------');
   console.log(JSON.stringify(action));
   console.log(JSON.stringify(response));
+  console.log('-----------------');
 
   //mock response
   //const response = { success: true, data: { id: 1 } };
 
   if (response.token) {
-    yield put(loginActions.onLoginResponse(response));
-    yield put(loginActions.disableLoader({}));
-
-    // no need to call navigate as this is handled by redux store with SwitchNavigator
+    yield all([
+      put(loginActions.onLoginResponse(response)),
+      put(loginActions.disableLoader({})),
+    ]);
     //yield call(navigationActions.navigateToHome);
   } else {
     yield put(loginActions.loginFailed());
     yield put(loginActions.disableLoader({}));
     setTimeout(() => {
-      Alert.alert('BoilerPlate', response.Message);
+      Alert.alert('Status', response.error);
     }, 200);
   }
 }
