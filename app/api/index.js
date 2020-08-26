@@ -17,3 +17,7 @@ export default function api(path, params, method, token) {
     .then(json => json)
     .catch(error => error);
 }
+
+export const updateAuthHeader = token => {
+  return token;
+};

@@ -3,10 +3,10 @@
  */
 import * as types from './types';
 
-export function requestLogin(email, password) {
+export function requestLogin(username, password) {
   return {
     type: types.LOGIN_REQUEST,
-    email,
+    username,
     password,
   };
 }

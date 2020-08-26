@@ -6,27 +6,32 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as loginActions from './actions';
 import styles from './styles';
 import { isEmpty } from 'ramda';
-import AsyncStorage from '@react-native-community/async-storage';
-import Form from './widgets/Form';
 
 export default function Login() {
   // remove these initial assignments after testing
-  const [email, setEmail] = useState('eve.holt@reqres.in');
-  const [password, setPassword] = useState('cityslicka');
+  const [username, setUsername] = useState('gomo');
+  const [password, setPassword] = useState('H!sFQSIJn@4fBqKS');
+  const [isLogging, setIsLogging] = useState(false);
 
   const id = useSelector(state => state.loginReducer.id);
   const dispatch = useDispatch();
+  const isUsingEmail = false;
 
-  const onCheck = () => {
+  const onCheckEmail = () => {
     const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    console.log(email);
-
-    if (reg.test(String(email).toLowerCase())) {
-      dispatch(loginActions.requestLogin(email, password));
+    console.log(username);
+    setIsLogging(true);
+    if (!isUsingEmail) {
+      dispatch(loginActions.requestLogin(username, password));
+      return;
+    }
+    if (reg.test(String(username).toLowerCase())) {
+      dispatch(loginActions.requestLogin(username, password));
     } else {
+      setIsLogging(false);
       Alert.alert('Invalid Email', 'Email address is not valid');
-      if (isEmpty(email)) {
-        setEmail('eve.holt@reqres.in');
+      if (isEmpty(username)) {
+        setUsername('');
       }
     }
   };
@@ -35,9 +40,9 @@ export default function Login() {
     <View style={styles.container}>
       <Text style={styles.login}>Login Status : {id}</Text>
       <TextInput
-        value={email}
-        onChangeText={text => setEmail(text)}
-        placeholder={'Email'}
+        value={username}
+        onChangeText={text => setUsername(text)}
+        placeholder={'Username'}
         style={styles.input}
       />
       <TextInput
@@ -48,7 +53,12 @@ export default function Login() {
         style={styles.input}
       />
 
-      <Button icon="login" mode="outlined" onPress={onCheck}>
+      <Button
+        icon="login"
+        mode="outlined"
+        onPress={onCheckEmail}
+        loading={isLogging}
+        disabled={isLogging}>
         Login
       </Button>
     </View>

@@ -6,9 +6,10 @@ import * as types from '../types';
 
 const initialState = {
   isLoggedIn: false,
+  isRejected: false,
   id: 0,
   token: '',
-  email: '',
+  username: '',
   password: '',
 };
 
@@ -16,7 +17,7 @@ export const loginReducer = createReducer(initialState, {
   [types.LOGIN_REQUEST](state, action) {
     return {
       ...state,
-      email: action.email,
+      username: action.username,
       password: action.password,
     };
   },

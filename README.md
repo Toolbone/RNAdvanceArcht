@@ -34,8 +34,8 @@ Uses the latest version of react-navigation (v5)
   - `/config` - Universal styles,images,metrics etc...
   - `/screens` - Feature level containers that holds the entire screen or page 
     - `login`- Login Feature
-      - `reducers` - Reducer associated with this feature
-      - `sagas` - Sagas related with this particular feature
+      - `reducers` - Reducer associated with this feature [might be 0..* or 0..0]
+      - `sagas` - Sagas related with this particular feature [might be 0..* or 1..*]
       - `selectors` - Selectors associated with the feature
       - `widgets` - Containers associated with the feature that has theme or project scheme 
   - `/lib` - lib helper files
