@@ -8,27 +8,17 @@ import { useSafeArea } from 'react-native-safe-area-context';
 import { Portal, FAB } from 'react-native-paper';
 import DeviceInfo from 'react-native-device-info';
 
-import Setting from 'app/screens/Setting';
-import About from 'app/screens/About';
-import Profile from 'app/screens/Profile';
-
 import TabBar from 'app/containers/tab-bar';
-
-const isTablet = DeviceInfo.isTablet();
-const Tab = isTablet
-  ? createMaterialTopTabNavigator()
-  : createMaterialBottomTabNavigator();
+import Setting from '../screens/setting';
+import About from '../screens/about';
+import Profile from '../screens/profile';
+import Home from '../screens/home';
+const Tab = createMaterialBottomTabNavigator();
 
 function Tabs() {
   const isFocused = useIsFocused();
   const safeArea = useSafeArea();
   let tabBarProps = {};
-
-  if (isTablet) {
-    tabBarProps = {
-      tabBar: props => <TabBar {...props} />,
-    };
-  }
 
   return (
     <React.Fragment>
@@ -42,25 +32,32 @@ function Tabs() {
         barStyle={{ backgroundColor: '#ffff' }}
         {...tabBarProps}>
         <Tab.Screen
-          name="Setting"
-          component={Setting}
+          name="Home"
+          component={Home}
           options={{
-            tabBarIcon: 'calendar-clock',
+            tabBarIcon: 'home',
           }}
         />
 
         <Tab.Screen
+          name="Setting"
+          component={Setting}
+          options={{
+            tabBarIcon: 'settings',
+          }}
+        />
+        <Tab.Screen
           name="About"
           component={About}
           options={{
-            tabBarIcon: 'account-multiple',
+            tabBarIcon: 'information-variant',
           }}
         />
         <Tab.Screen
           name="Profile"
           component={Profile}
           options={{
-            tabBarIcon: 'layers',
+            tabBarIcon: 'account-multiple',
           }}
         />
       </Tab.Navigator>
@@ -68,7 +65,7 @@ function Tabs() {
         <FAB
           visible={isFocused} // show FAB only when this screen is focused
           icon="plus-box"
-          label={isTablet ? 'Create new' : null}
+          label={'Create new'}
           style={[
             styles.fab,
             {

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector } from 'react-redux';
+import DeviceInfo from 'react-native-device-info';
 
 import { navigationRef } from './NavigationService';
 import Tabs from 'app/containers/Tabs';
@@ -26,10 +27,23 @@ const homeOptions = {
 
 function App() {
   const isLoggedIn = useSelector(state => state.loginReducer.isLoggedIn);
+  const stackProps = DeviceInfo.isTablet() ? { headerMode: 'none' } : {};
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator>
+      <Stack.Navigator
+        {...stackProps}
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '##fff',
+            borderBottomWidth: StyleSheet.hairlineWidth,
+          },
+          headerTintColor: '#2c3e50',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          headerBackTitleVisible: false,
+        }}>
         {isLoggedIn ? (
           <Stack.Screen
             name="Home"
@@ -71,3 +85,42 @@ function App() {
 }
 
 export default App;
+/*
+<Stack.Navigator>
+        {isLoggedIn ? (
+          <Stack.Screen
+            name="Home"
+            component={Tabs}
+            options={{
+              headerLeft: null,
+              headerRight: () => (
+                <View style={{ flexDirection: 'row' }}>
+                  <IconButton
+                    icon="settings"
+                    color="#bdc3c7"
+                    size={20}
+                    onPress={() => {}}
+                  />
+                  <IconButton
+                    icon="bell"
+                    color="#bdc3c7"
+                    size={20}
+                    onPress={() => {}}
+                  />
+                </View>
+              ),
+            }}
+          />
+        ) : (
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{
+              // When logging out, a pop animation feels intuitive
+              // You can remove this if you want the default 'push' animation
+              animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
+            }}
+          />
+        )}
+      </Stack.Navigator>
+ */
