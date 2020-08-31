@@ -4,9 +4,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useSelector } from 'react-redux';
 
 import { navigationRef } from './NavigationService';
-
+import Tabs from 'app/containers/Tabs';
 import Login from 'app/screens/login';
 import Home from 'app/screens/home';
+
+import { StyleSheet, View } from 'react-native';
+import { IconButton } from 'react-native-paper';
 
 const Stack = createStackNavigator();
 
@@ -28,7 +31,29 @@ function App() {
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator>
         {isLoggedIn ? (
-          <Stack.Screen name="Home" component={Home} options={homeOptions} />
+          <Stack.Screen
+            name="Home"
+            component={Tabs}
+            options={{
+              headerLeft: null,
+              headerRight: () => (
+                <View style={{ flexDirection: 'row' }}>
+                  <IconButton
+                    icon="settings"
+                    color="#bdc3c7"
+                    size={20}
+                    onPress={() => {}}
+                  />
+                  <IconButton
+                    icon="bell"
+                    color="#bdc3c7"
+                    size={20}
+                    onPress={() => {}}
+                  />
+                </View>
+              ),
+            }}
+          />
         ) : (
           <Stack.Screen
             name="Login"

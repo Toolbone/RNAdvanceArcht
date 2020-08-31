@@ -1,7 +1,7 @@
 /*
- * Reducer actions related with login
+ * Action creators are functions that create and return actions .
  */
-import * as types from './types';
+import * as types from '../../config/types';
 
 export function requestLogin(username, password) {
   return {
@@ -24,18 +24,6 @@ export function onLoginResponse(response) {
     type: types.LOGIN_RESPONSE,
     token: response.token,
     response,
-  };
-}
-
-export function enableLoader() {
-  return {
-    type: types.LOGIN_ENABLE_LOADER,
-  };
-}
-
-export function disableLoader() {
-  return {
-    type: types.LOGIN_DISABLE_LOADER,
   };
 }
 

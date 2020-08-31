@@ -10,13 +10,14 @@ export default function Home() {
   const dispatch = useDispatch();
   const onLogout = () => dispatch(loginActions.logOut());
   const token = useSelector(state => state.loginReducer.token);
+  const loader = useSelector(state => state.projectReducer.isLoading);
 
   return (
     <View style={styles.container}>
       <Button icon="logout" mode="outlined" onPress={onLogout}>
         Logout
       </Button>
-      <Text style={styles.login}>Login Status : {token}</Text>
+      <Text style={styles.login}>Login Status : {loader}</Text>
     </View>
   );
 }

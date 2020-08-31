@@ -31,7 +31,8 @@ Uses the latest version of react-navigation (v5)
 - `/app` - Contains React Native App codebase
   - `/api` - Api module class. Each file will be feature based like ProductAPI, LoginAPI etc...
   - `/components` - Universal shared containers, components are stand-alone and decoupled.
-  - `/config` - Universal styles,images,metrics etc...
+  - `/containers` - Project level containers, like widget associated with project scheme but in a higher level
+  - `/config` - Project level styles,images,metrics,constants, strings etc...
   - `/screens` - Feature level containers that holds the entire screen or page 
     - `login`- Login Feature
       - `reducers` - Reducer associated with this feature [might be 0..* or 0..0]

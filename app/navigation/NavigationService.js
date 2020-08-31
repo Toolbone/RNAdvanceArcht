@@ -10,7 +10,15 @@ function goBack() {
   navigationRef.current?.goBack();
 }
 
+function reset(name, params) {
+  navigationRef.current?.reset({
+    index: 0,
+    routes: [{ name, params }],
+  });
+}
+
 export default {
   navigate,
+  reset,
   goBack,
 };

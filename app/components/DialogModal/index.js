@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Alert, Modal, Text, TouchableHighlight, View } from 'react-native';
 import styles from './styles';
 
-class PopModal extends Component {
+class DialogModal extends Component {
   state = {
     modalVisible: false,
   };
@@ -49,4 +49,4 @@ class PopModal extends Component {
   }
 }
 
-export default PopModal;
+export default DialogModal;
