@@ -33,7 +33,7 @@ Uses the latest version of react-navigation (v5)
   - `/components` - Universal shared containers, components are stand-alone and decoupled.
   - `/containers` - Project level containers, like widget associated with project scheme but in a higher level
   - `/config` - Project level styles, images, metrics, strings etc...
-  - `/controllers` - Project level styles, images, metrics, strings etc...
+  - `/controllers` - This includes centralise error handling mechanism and other Project controllers
   - `/systems` - Project redux elements (actions and reducers), constants, types
   - `/screens` - Feature level containers that holds the entire screen or page 
     - `login`- Login Feature
