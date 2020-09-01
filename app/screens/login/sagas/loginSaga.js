@@ -1,6 +1,5 @@
 import { call, put } from 'redux-saga/effects';
 import loginUser from 'app/api/methods/loginUser';
-import * as projectActions from '../../../system/actions';
 import * as sagaController from '../../../controllers/sagaController';
 
 export default function* loginAsync(action) {

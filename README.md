@@ -69,3 +69,9 @@ Uses the latest version of react-navigation (v5)
   - Hit `Run` after selecting the desired device
 
 9. All set!!!, you are ready to go!
+
+
+When you face issue with node_module try this steps into your terminal
+
+1. rm -rf node_modules 
+2. npm install
