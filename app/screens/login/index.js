@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Alert, KeyboardAvoidingView } from 'react-native';
 import { Text, Button, TextInput } from 'react-native-paper';
 
@@ -7,26 +7,30 @@ import * as loginActions from './actions';
 import styles from './styles';
 import { isEmpty } from 'ramda';
 import Loader from '../../components/Loader';
-import * as projectActions from '../../config/actions';
+import * as projectActions from '../../system/actions';
 
 export default function Login() {
   // remove these initial assignments after testing
   const [username, setUsername] = useState('gomo');
   const [password, setPassword] = useState('H!sFQSIJn@4fBqKS');
   const [isLogging, setIsLogging] = useState(false);
-
-  let isLoading = useSelector(state => state.projectReducer.isLoading);
-
   const id = useSelector(state => state.loginReducer.id);
   const dispatch = useDispatch();
   const isUsingEmail = false;
+
+  const hideLoader = useCallback(() => dispatch(projectActions.showLoader()), [
+    dispatch,
+  ]);
+
+  const isLoading = useSelector(state => state.projectReducer.isLoading);
 
   const onCheckEmail = () => {
     const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     console.log(username);
 
-    dispatch(projectActions.showLoader());
-    //setIsLogging(true);
+    hideLoader(isLoading);
+
+    setIsLogging(true);
     if (!isUsingEmail) {
       dispatch(loginActions.requestLogin(username, password));
       return;
@@ -41,11 +45,9 @@ export default function Login() {
       }
     }
   };
-
   dispatch(projectActions.hideLoader());
   return (
     <View style={styles.container}>
-      <Loader modalVisible={isLoading} animationType="fade" />
       <Text style={styles.login}>Login Status : {id}</Text>
       <TextInput
         value={username}

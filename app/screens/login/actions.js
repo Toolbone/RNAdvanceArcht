@@ -1,7 +1,7 @@
 /*
  * Action creators are functions that create and return actions .
  */
-import * as types from '../../config/types';
+import * as types from '../../system/types';
 
 export function requestLogin(username, password) {
   return {
@@ -18,8 +18,6 @@ export function loginFailed() {
 }
 
 export function onLoginResponse(response) {
-  console.log('*************************');
-  console.log(JSON.stringify(response));
   return {
     type: types.LOGIN_RESPONSE,
     token: response.token,

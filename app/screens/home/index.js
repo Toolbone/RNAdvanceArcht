@@ -17,6 +17,8 @@ export default function Home() {
       <Button icon="logout" mode="outlined" onPress={onLogout}>
         Logout
       </Button>
+      <Text style={styles.login}>Status: </Text>
+      <Text style={styles.login}>Token : {token}</Text>
       <Text style={styles.login}>Login Status : {loader}</Text>
     </View>
   );

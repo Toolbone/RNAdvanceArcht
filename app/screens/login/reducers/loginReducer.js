@@ -4,7 +4,7 @@
  * Reducers intercept the actions created by the action creators and modify the application state accordingly.
  */
 import createReducer from 'app/lib/createReducer';
-import * as types from '../../../config/types';
+import * as types from '../../../system/types';
 
 const initialState = {
   isLoggedIn: false,

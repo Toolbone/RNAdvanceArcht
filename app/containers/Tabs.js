@@ -8,7 +8,7 @@ import { useSafeArea } from 'react-native-safe-area-context';
 import { Portal, FAB } from 'react-native-paper';
 import DeviceInfo from 'react-native-device-info';
 
-import TabBar from 'app/containers/tab-bar';
+import TabBar from 'app/containers/TabBar';
 import Setting from '../screens/setting';
 import About from '../screens/about';
 import Profile from '../screens/profile';

@@ -1,11 +1,9 @@
 import { call, put } from 'redux-saga/effects';
 import loginUser from 'app/api/methods/loginUser';
-import * as projectActions from '../../../config/actions';
-import * as sagaController from '../../../controllers/SagaController';
+import * as projectActions from '../../../system/actions';
+import * as sagaController from '../../../controllers/sagaController';
 
 export default function* loginAsync(action) {
-  //yield put(projectActions.showLoader()); // useful when we have a root loader UI
-
   const { response, error } = yield call(
     loginUser,
     action.username,

@@ -1,10 +1,10 @@
-//To make the actions and response codes to
+//To make the actions and response codes to be centralised, full control of the flow
 //We will aim to cover/handle all possible error either propagating error to the user or recovering from anticipated error.
 //This acts as our centralise error handling mechanism which enables easily migrate our error handling to a centralise SDK.
 
 import { all, put, fork, call } from 'redux-saga/effects';
 import * as loginActions from '../screens/login/actions';
-import * as projectActions from '../config/actions';
+import * as projectActions from '../system/actions';
 import { updateAuthHeader } from '../api';
 import { Alert } from 'react-native';
 import { isEmpty } from 'ramda';
@@ -62,7 +62,6 @@ function* yieldPositiveCodes(code: StatusCode, response) {
     case StatusCode.SUCCESS:
       return yield all([
         put(loginActions.onLoginResponse(response)),
-        //put(projectActions.showLoader(false)),
         call(projectActions.resetToHome),
         fork(updateAuthHeader, response.token),
       ]);

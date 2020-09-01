@@ -5,7 +5,7 @@ import { Avatar, Text, IconButton, Menu, Divider } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { withTheme } from 'react-native-paper';
 
-import GeneralStatusBar from './status-bar';
+import GeneralStatusBar from './GeneralStatusBar';
 
 const width = 120;
 const CustomIcon = ({ name, onPress }) => {

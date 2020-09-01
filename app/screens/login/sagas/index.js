@@ -5,7 +5,7 @@
  * Top level sagas in store will take care of combining sagas
  */
 import { takeEvery } from 'redux-saga/effects';
-import * as types from '../../../config/types';
+import * as types from '../../../system/types';
 import loginSaga from './loginSaga';
 
 export const loginSagas = [takeEvery(types.LOGIN_REQUEST, loginSaga)];

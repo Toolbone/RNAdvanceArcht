@@ -1,6 +1,6 @@
 /*
  * combines all th existing reducers
  */
-import * as loginReducer from 'app/screens/login/reducers/loginReducer';
-import * as projectReducer from 'app/config/reducer';
+import * as projectReducer from '../system/reducers';
+import * as loginReducer from '../screens/login/reducers/loginReducer';
 export default Object.assign({}, loginReducer, projectReducer);
