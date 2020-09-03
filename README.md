@@ -1,11 +1,15 @@
 #  🏆 React Native Advance Architecture 🏆 
 
-[![React Native](https://img.shields.io/badge/React%20Native-v0.62.2-green.svg)](https://facebook.github.io/react-native/)
-[![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.1-blue.svg)](https://reactnavigation.org/)
+[![React Native](https://img.shields.io/badge/React%20Native-v0.63.2-green.svg)](https://facebook.github.io/react-native/)
+[![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.7.3-blue.svg)](https://reactnavigation.org/)
 
 This project aims to act as a template for React Native. This project configured with redux, redux saga and redux persist. 
 Uses the latest version of react-navigation (v5)
 
+## Recently Build
+ * [x] iOS
+ * [x] Android
+ 
 ## Libraries
 
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
@@ -75,3 +79,8 @@ When you face issue with node_module try this steps into your terminal
 
 1. rm -rf node_modules 
 2. npm install
+
+
+## Todo
+ * [x] Unit Tests
+ * [x] More Screen Flow
