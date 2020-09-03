@@ -6,6 +6,7 @@ import createReducer from 'app/lib/createReducer';
 import * as types from 'app/system/types';
 
 const initialState = {
+  type: types.DISABLE_LOADER,
   isLoading: false,
 };
 

@@ -2,7 +2,7 @@
 //We will aim to cover/handle all possible error either propagating error to the user or recovering from anticipated error.
 //This acts as our centralise error handling mechanism which enables easily migrate our error handling to a centralise SDK.
 
-import { all, put, fork, call } from 'redux-saga/effects';
+import { all, put, fork } from 'redux-saga/effects';
 import * as loginActions from '../screens/login/actions';
 import * as projectActions from '../system/actions';
 import { updateAuthHeader } from '../api';
@@ -58,11 +58,12 @@ function processResponseCode(response) {
 }
 
 function* yieldPositiveCodes(code: StatusCode, response) {
+  yield put(projectActions.hideLoader());
+
   switch (code) {
     case StatusCode.SUCCESS:
       return yield all([
         put(loginActions.onLoginResponse(response)),
-        call(projectActions.resetToHome),
         fork(updateAuthHeader, response.token),
       ]);
     case StatusCode.CREATED:
@@ -75,19 +76,29 @@ function* yieldPositiveCodes(code: StatusCode, response) {
   }
 }
 
-function* yieldNegativeCodes(code: StatusCode) {
+function* yieldNegativeCodes(code: StatusCode, response) {
   switch (code.toString()) {
     case StatusCode.INVALID:
-      return yield all([
-        put(loginActions.loginFailed()),
-        //put(projectActions.showLoader(false)),
-      ]);
+      //Alert.alert(code, response.message.toString());
+      break;
+    //return yield all([put(loginActions.loginFailed())]);
     case StatusCode.TOO_MANY_REQUESTS:
+      //Alert.alert(code, response.message.toString());
+
       break;
     case StatusCode.NO_RESPONSE:
+     // Alert.alert(code, response.message.toString());
+
       break;
 
     default:
       Alert.alert('STATUS CODE NOT FOUND');
   }
+
+  return yield all([
+    put(loginActions.loginFailed(code, response.message.toString())),
+    put(projectActions.hideLoader()),
+  ]);
+
+  //return yield put(projectActions.hideLoader());
 }

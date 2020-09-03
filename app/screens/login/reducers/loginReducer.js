@@ -12,6 +12,8 @@ const initialState = {
   token: '',
   username: '',
   password: '',
+  message: '',
+  error_code: '',
 };
 
 export const loginReducer = createReducer(initialState, {
@@ -29,16 +31,24 @@ export const loginReducer = createReducer(initialState, {
       isLoggedIn: true,
     };
   },
-  [types.LOGIN_FAILED](state) {
+  [types.LOGIN_FAILED](state, action) {
     return {
       ...state,
       isLoggedIn: false,
+      message: action.message,
     };
   },
   [types.LOG_OUT](state) {
     return {
       ...state,
       isLoggedIn: false,
+    };
+  },
+  [types.LOGIN_RETRY](state, action) {
+    return {
+      ...state,
+      isLoggedIn: false,
+      message: action.message,
     };
   },
 });

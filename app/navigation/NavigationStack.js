@@ -1,18 +1,16 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import DeviceInfo from 'react-native-device-info';
 
 import { navigationRef } from './NavigationService';
 import Tabs from 'app/containers/Tabs';
 import Login from 'app/screens/login';
-import Home from 'app/screens/home';
 
 import { StyleSheet, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Loader from '../components/Loader';
-import * as projectActions from '../system/actions';
 
 const Stack = createStackNavigator();
 
@@ -28,9 +26,9 @@ const homeOptions = {
 };
 
 function App() {
-  const isLoggedIn = useSelector(state => state.loginReducer.isLoggedIn);
+  const isLoggedIn = useSelector((state) => state.loginReducer.isLoggedIn);
   const stackProps = DeviceInfo.isTablet() ? { headerMode: 'none' } : {};
-  let isLoading = useSelector(state => state.projectReducer.isLoading);
+  let isLoading = useSelector((state) => state.projectReducer.isLoading);
 
   return (
     <NavigationContainer ref={navigationRef}>

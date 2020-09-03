@@ -82,5 +82,5 @@ When you face issue with node_module try this steps into your terminal
 
 
 ## Todo
- * [x] Unit Tests
- * [x] More Screen Flow
+ * [ ] Unit Tests
+ * [ ] More Screen Flow
