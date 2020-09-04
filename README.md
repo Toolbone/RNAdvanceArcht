@@ -30,6 +30,10 @@ Uses the latest version of react-navigation (v5)
 - [Yarn](https://yarnpkg.com/)
 - A development machine set up for React Native by following [these instructions](https://facebook.github.io/react-native/docs/getting-started.html)
 
+## Project Workflow
+![Work Flow](/app/assets/Project_Flow.png)
+
+
 ## Project Structure
 
 - `/app` - Contains React Native App codebase
