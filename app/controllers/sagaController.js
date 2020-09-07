@@ -5,7 +5,7 @@
 import { all, put, fork } from 'redux-saga/effects';
 import * as loginActions from '../screens/login/actions';
 import * as projectActions from '../system/actions';
-import { updateAuthHeader } from '../api';
+import { updateAuthHeader } from '../api/RemoteData';
 import { Alert } from 'react-native';
 import { isEmpty } from 'ramda';
 

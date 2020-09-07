@@ -4,7 +4,9 @@
 [![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.7.3-blue.svg)](https://reactnavigation.org/)
 
 This project aims to act as a template for React Native. This project configured with redux, redux saga and redux persist. 
-Uses the latest version of react-navigation (v5)
+Uses the latest version of react-navigation (v5).
+
+This project also serves as a template for Wordpress + Woocommerce mobile app, which makes it more real-world project template!
 
 ## Recently Build
  * [x] iOS
@@ -20,6 +22,7 @@ Uses the latest version of react-navigation (v5)
 - [Redux](http://redux.js.org/) with [hooks](https://react-redux.js.org/api/hooks) support
 - [Redux Saga](https://redux-saga.js.org/)
 - [Redux Persist](https://github.com/rt2zz/redux-persist/)
+- [Axios](https://github.com/axios/axios)
 - [Reselect](https://github.com/reduxjs/reselect)
 - [Jest](https://facebook.github.io/jest/)
 - [Eslint](http://eslint.org/) ([Airbnb config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb))
@@ -56,7 +59,7 @@ Uses the latest version of react-navigation (v5)
   - `/store` - Includes everything you need to set up store.
     - `reducers` - Combines all feature based reducers
     - `sagas` - Combines all feature based sagas
-    - `index.js` - Set ups store and export things
+    - `RemoteData.js` - Set ups store and export things
 
 ## Getting Started
 
@@ -85,6 +88,8 @@ When you face issue with node_module try this steps into your terminal
 2. npm install
 
 
-## Todo
+## Todo by Priority
+ * [X] Use Axios for HTTP client
  * [ ] Unit Tests
  * [ ] More Screen Flow
+ * [ ] Clean UI
