@@ -1,8 +1,8 @@
-import Api from 'app/api';
+import RemoteData from 'app/api/RemoteData';
 import ApiConstants from '../ApiConstants';
 
 export default function loginUser(username, password) {
-  return Api(ApiConstants.LOGIN, { username, password }, 'post')
-    .then(response => ({ response }))
-    .catch(error => ({ error }));
+  return RemoteData.post(ApiConstants.LOGIN, { username, password })
+    .then((response) => ({ response }))
+    .catch((error) => ({ error }));
 }
