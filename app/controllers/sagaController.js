@@ -3,7 +3,7 @@
 //This acts as our centralise error handling mechanism which enables easily migrate our error handling to a centralise SDK.
 
 import { all, put, fork } from 'redux-saga/effects';
-import * as loginActions from '../screens/login/actions';
+import * as loginActions from '../screens/login/redux/actions';
 import * as projectActions from '../system/actions';
 import { updateAuthHeader } from '../api/RemoteData';
 import { Alert } from 'react-native';
@@ -22,45 +22,23 @@ const StatusCode = Object.freeze({
 });
 
 export function* controlledStates(response, error) {
-  console.log(JSON.stringify(response));
   //Backend api rules when success
-  const successRules =
-    !isEmpty(response) &&
-    (isEmpty(error) || error === undefined) &&
-    (isEmpty(response?.code) || response.code === undefined);
-
-  if (successRules) {
-    return yield successStates(response);
+  if (response?.status !== undefined || !isEmpty(response?.status)) {
+    return yield serverStates(response);
   } else {
-    return yield unSuccessfulStates(response, error);
+    return yield failStates(response, error);
   }
 }
 
-function* successStates(response) {
-  return yield yieldPositiveCodes(processResponseCode(response), response);
-}
-
-function* unSuccessfulStates(response, error) {
-  return yield yieldNegativeCodes(
-    processResponseCode(response, error),
-    response,
-  );
-}
-
-function processResponseCode(response) {
-  if (response.data !== undefined) {
-    return response.data.status === undefined
-      ? StatusCode.INTERNAL_SERVER_ERROR
-      : response.data.status.toString();
-  } else {
-    return StatusCode.SUCCESS;
-  }
+//When server responded
+function* serverStates(response) {
+  return yield yieldPositiveCodes(response.status, response.data);
 }
 
 function* yieldPositiveCodes(code: StatusCode, response) {
   yield put(projectActions.hideLoader());
 
-  switch (code) {
+  switch (code.toString()) {
     case StatusCode.SUCCESS:
       return yield all([
         put(loginActions.onLoginResponse(response)),
@@ -74,12 +52,30 @@ function* yieldPositiveCodes(code: StatusCode, response) {
     default:
       Alert.alert('STATUS CODE NOT FOUND');
   }
+  console.log(
+    JSON.stringify(response) +
+      '---------' +
+      code +
+      ' >>>>> ' +
+      StatusCode.SUCCESS,
+  );
+}
+
+//*****************************
+// When server returned error
+function* failStates(response, error) {
+  return yield yieldNegativeCodes(processErrorCode(error), response);
+}
+
+function processErrorCode(error) {
+  console.log(JSON.stringify(error) + '---------');
+  return StatusCode.INVALID;
 }
 
 function* yieldNegativeCodes(code: StatusCode, response) {
-  switch (code.toString()) {
+  switch (code) {
     case StatusCode.INVALID:
-      //Alert.alert(code, response.message.toString());
+      Alert.alert(code, response?.message?.toString());
       break;
     //return yield all([put(loginActions.loginFailed())]);
     case StatusCode.TOO_MANY_REQUESTS:
@@ -87,7 +83,7 @@ function* yieldNegativeCodes(code: StatusCode, response) {
 
       break;
     case StatusCode.NO_RESPONSE:
-     // Alert.alert(code, response.message.toString());
+      // Alert.alert(code, response.message.toString());
 
       break;
 

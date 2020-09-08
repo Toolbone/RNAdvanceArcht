@@ -5,8 +5,9 @@
  */
 import createReducer from 'app/lib/createReducer';
 import * as types from '../../../system/types';
+import { Alert } from 'react-native';
 
-const initialState = {
+const loginInitialState = {
   isLoggedIn: false,
   id: 0,
   token: '',
@@ -16,7 +17,17 @@ const initialState = {
   error_code: '',
 };
 
-export const loginReducer = createReducer(initialState, {
+const otherInitialState = {
+  isLoggedIn: false,
+  id: 0,
+  token: '',
+  username: '',
+  password: '',
+  message: '',
+  error_code: '',
+};
+
+export const loginReducer = createReducer(loginInitialState, {
   [types.LOGIN_REQUEST](state, action) {
     return {
       ...state,
@@ -42,6 +53,7 @@ export const loginReducer = createReducer(initialState, {
     return {
       ...state,
       isLoggedIn: false,
+      token: '',
     };
   },
   [types.LOGIN_RETRY](state, action) {
@@ -52,3 +64,5 @@ export const loginReducer = createReducer(initialState, {
     };
   },
 });
+
+export const otherReducer = createReducer(otherInitialState, {});

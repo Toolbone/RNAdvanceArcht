@@ -48,9 +48,10 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
   - `/systems` - Project redux elements (actions and reducers), constants, types
   - `/screens` - Feature level containers that holds the entire screen or page 
     - `login`- Login Feature
-      - `reducers` - Reducer associated with this feature [might be 0..* or 0..0]
-      - `sagas` - Sagas related with this particular feature [might be 0..* or 1..*]
-      - `selectors` - Selectors associated with the feature
+        - `redux`- Redux state managing files
+          - `reducers` - Reducer associated with this feature [might be 0..* or 0..0]
+          - `sagas` - Sagas related with this particular feature [might be 0..* or 1..*]
+          - `selectors` - Selectors associated with the feature
       - `widgets` - Containers associated with the feature that has theme or project scheme 
   - `/lib` - lib helper files
   - `/navigation` - All navigation related stuff including helpers functions and navigation stack
@@ -81,12 +82,25 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
 
 9. All set!!!, you are ready to go!
 
-
+## Troubleshooting
 When you face issue with node_module try this steps into your terminal
 
 1. rm -rf node_modules 
 2. npm install
 
+
+Unable to resolve module `<module>>` from `node_modules/ ****`: '<module>' could not be found within the project.
+
+If you are sure the module exists, try these steps:
+ 1. Clear watchman watches: watchman watch-del-all
+ 2. Delete node_modules: rm -rf node_modules and run yarn install
+ 3. Reset Metro's cache: yarn start --reset-cache
+ 4. Remove the cache: rm -rf /tmp/metro-*
+
+
+To kill process
+1. sudo lsof -i :8081
+2. kill -9 <PID>
 
 ## Todo by Priority
  * [X] Use Axios for HTTP client

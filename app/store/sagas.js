@@ -4,7 +4,7 @@
  *
  */
 import { all } from 'redux-saga/effects';
-import { loginSagas } from 'app/screens/login/sagas';
+import { loginSagas } from 'app/screens/login/redux/sagas';
 
 // export default [loginSaga];
 

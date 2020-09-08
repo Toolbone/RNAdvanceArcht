@@ -3,6 +3,7 @@ import ApiConstants from './ApiConstants';
 import Axios, { AxiosResponse } from 'axios';
 import OAuth from 'oauth-1.0a';
 import CryptoJS from 'crypto-js/hmac-sha1';
+import { Alert } from 'react-native';
 
 /*
 
@@ -56,7 +57,6 @@ export const updateAuthHeader = (token) => {
 
 const client = Axios.create({
   baseURL: ApiConstants.BASE_URL,
-  timeout: 1000,
 });
 
 const _getOAuth = (): OAuth =>
@@ -80,14 +80,14 @@ const get = async (path: string): Promise<AxiosResponse> => {
   return client.get(request.url, { params: oauth });
 };
 
-const post = async (path: string, body: object): Promise<AxiosResponse> => {
+const post = async (path: string, body: any): Promise<AxiosResponse> => {
   const request = {
     url: `${ApiConstants.BASE_URL}${path}`,
     method: 'POST',
   };
-  const oauth = _getOAuth().authorize(request);
-
-  return client.post(request.url, body, { params: oauth });
+  //const oauth = _getOAuth().authorize(request);
+  //Alert.alert(_getOAuth().authorize(request), JSON.stringify(body));
+  return client.post(request.url, body);
 };
 
 export const updateAuthHeader = (token) => {

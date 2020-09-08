@@ -1,7 +1,7 @@
 /*
  * Action creators are functions that create and return actions .
  */
-import * as types from '../../system/types';
+import * as types from '../../../system/types';
 
 export function requestLogin(username, password) {
   return {
