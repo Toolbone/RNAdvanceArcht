@@ -2,6 +2,7 @@
  * Action creators are functions that create and return actions .
  */
 import * as types from '../../../system/types';
+import {Alert} from 'react-native';
 
 export function requestLogin(username, password) {
   return {
@@ -11,25 +12,32 @@ export function requestLogin(username, password) {
   };
 }
 
+export function onLoginResponse(response) {
+  return {
+    type: types.LOGIN_RESPONSE,
+    token: response.data.jwt,
+    response,
+  };
+}
+
+export function requestLogout(token) {
+  return {
+    type: types.LOGOUT_REQUEST,
+    token: token,
+  };
+}
+
+export function onLogoutResponse() {
+  return {
+    type: types.LOGOUT_RESPONSE,
+  };
+}
+
 export function loginFailed(code, message) {
   return {
     type: types.LOGIN_FAILED,
     code: code,
     message: message,
-  };
-}
-
-export function onLoginResponse(response) {
-  return {
-    type: types.LOGIN_RESPONSE,
-    token: response.token,
-    response,
-  };
-}
-
-export function logOut() {
-  return {
-    type: types.LOG_OUT,
   };
 }
 

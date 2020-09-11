@@ -28,11 +28,11 @@ const homeOptions = {
 function App() {
   const isLoggedIn = useSelector((state) => state.loginReducer.isLoggedIn);
   const stackProps = DeviceInfo.isTablet() ? { headerMode: 'none' } : {};
-  let isLoading = useSelector((state) => state.projectReducer.isLoading);
+  let isLoading = useSelector((state) => state.rootReducer.isLoading);
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Loader modalVisible={isLoading} animationType="fade" />
+      {/*<Loader modalVisible={isLoading} animationType="fade" />*/}
       <Stack.Navigator
         {...stackProps}
         screenOptions={{

@@ -89,21 +89,32 @@ When you face issue with node_module try this steps into your terminal
 2. npm install
 
 
-Unable to resolve module `<module>>` from `node_modules/ ****`: '<module>' could not be found within the project.
+Unable to resolve module \<module> from `node_modules/ ****`: \<module> could not be found within the project.
 
 If you are sure the module exists, try these steps:
  1. Clear watchman watches: watchman watch-del-all
  2. Delete node_modules: rm -rf node_modules and run yarn install
  3. Reset Metro's cache: yarn start --reset-cache
  4. Remove the cache: rm -rf /tmp/metro-*
-
+ 
+ If icons not showing properly
+ * react-native link react-native-vector-icons
 
 To kill process
 1. sudo lsof -i :8081
 2. kill -9 <PID>
 
+Extra tool commands for gitif you want to push your local files to remote files 
+* git push -f \<remote> \<branch>
+* git push -f origin master
+
 ## Todo by Priority
+
  * [X] Use Axios for HTTP client
- * [ ] Unit Tests
  * [ ] More Screen Flow
+     * [ ] Product List
+     * [ ] Product Detail
+ * [ ] Unit Tests   
+ * [ ] Set oauth 1.0 encrypted
  * [ ] Clean UI
+ 

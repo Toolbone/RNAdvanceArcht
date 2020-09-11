@@ -6,20 +6,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as loginActions from './redux/actions';
 import styles from './styles';
 import { isEmpty } from 'ramda';
-import * as projectActions from '../../system/actions';
+import * as rootActions from '../../system/actions';
 
 export default function Login() {
   // remove these initial assignments after testing
   const [username, setUsername] = useState('github');
   const [password, setPassword] = useState('^ZG78@aRLqT6Cjn1Bx8jEskE');
   const id = useSelector((state) => state.loginReducer.id);
-  let isLoading = useSelector((state) => state.projectReducer.isLoading);
+  let isLoading = useSelector((state) => state.rootReducer.isLoading);
   let message = useSelector((state) => state.loginReducer.message);
 
   const dispatch = useDispatch();
   const isUsingEmail = false;
 
-  const showLoader = useCallback(() => dispatch(projectActions.showLoader()), [
+  const showLoader = useCallback(() => dispatch(rootActions.showLoader()), [
     dispatch,
   ]);
   const loginRetry = useCallback(() => dispatch(loginActions.onLoginRetry()), [
@@ -66,7 +66,7 @@ export default function Login() {
         onPress={onCheckEmail}
         disabled={isLoading}
         loading={isLoading}>
-        Login
+        {`Login  ${''}`}
       </Button>
 
       <Text style={styles.login}>Login Status : {message}</Text>

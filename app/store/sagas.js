@@ -4,10 +4,11 @@
  *
  */
 import { all } from 'redux-saga/effects';
-import { loginSagas } from 'app/screens/login/redux/sagas';
+import { loginSagas } from '../screens/login/redux/sagas';
+import { productListSagas } from '../screens/home/redux/sagas';
 
 // export default [loginSaga];
 
 export default function* rootSaga() {
-  yield all([...loginSagas]);
+  yield all([...loginSagas, ...productListSagas]);
 }

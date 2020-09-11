@@ -49,18 +49,16 @@ export const loginReducer = createReducer(loginInitialState, {
       message: action.message,
     };
   },
-  [types.LOG_OUT](state) {
+  [types.LOGOUT_REQUEST](state) {
     return {
       ...state,
       isLoggedIn: false,
-      token: '',
+      token: state.token,
     };
   },
-  [types.LOGIN_RETRY](state, action) {
+  [types.LOGOUT_RESPONSE]() {
     return {
-      ...state,
-      isLoggedIn: false,
-      message: action.message,
+      token: '',
     };
   },
 });

@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 
 import { useDispatch, useSelector } from 'react-redux';
 import * as loginActions from 'app/screens/login/redux/actions';
 import styles from './styles';
+import { requestProductList } from './redux/actions';
 
 export default function Home() {
   const dispatch = useDispatch();
-  const onLogout = () => dispatch(loginActions.logOut());
-  const token = useSelector(state => state.loginReducer.token);
-  const loader = useSelector(state => state.projectReducer.isLoading);
+  const token = useSelector((state) => state.loginReducer.token);
+  const loader = useSelector((state) => state.rootReducer.isLoading);
+  const onLogout = () => dispatch(loginActions.requestLogout(token));
+
+  useEffect(() => {
+    dispatch(requestProductList(1));
+  }, [dispatch]);
 
   return (
     <View style={styles.container}>

@@ -10,7 +10,7 @@ const initialState = {
   isLoading: false,
 };
 
-export const projectReducer = createReducer(initialState, {
+export const rootReducer = createReducer(initialState, {
   [types.ENABLE_LOADER](state, action) {
     return {
       ...state,

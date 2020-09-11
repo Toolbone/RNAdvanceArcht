@@ -4,15 +4,17 @@
 
 import { all, put, fork } from 'redux-saga/effects';
 import * as loginActions from '../screens/login/redux/actions';
-import * as projectActions from '../system/actions';
+import * as rootActions from '../system/actions';
 import { updateAuthHeader } from '../api/RemoteData';
 import { Alert } from 'react-native';
 import { isEmpty } from 'ramda';
+import * as ActionTypes from '../system/types';
 
 const StatusCode = Object.freeze({
   SUCCESS: '200',
   CREATED: '201',
   ACCEPTED: '202',
+  BAD_REQUEST: '400',
   BAD_GATEWAY: '502',
   SERVICE_UNAVAILABLE: '503',
   TOO_MANY_REQUESTS: '429',
@@ -21,48 +23,89 @@ const StatusCode = Object.freeze({
   INTERNAL_SERVER_ERROR: '500',
 });
 
-export function* controlledStates(response, error) {
+let actionType = ActionTypes.DEFAULT;
+
+export function* controlledStates(response, error, type) {
   //Backend api rules when success
-  if (response?.status !== undefined || !isEmpty(response?.status)) {
-    return yield serverStates(response);
+  console.log(
+    '\n---------\nActionType: ' +
+      actionType +
+      '\nResponse: ' +
+      JSON.stringify(response) +
+      '\nError: ' +
+      JSON.stringify(error) +
+      JSON.stringify(response?.data?.success) +
+      JSON.stringify(response?.data?.data?.message) +
+      '\n---------',
+  );
+  actionType = type;
+  if (isEmpty(response?.status) || response === undefined) {
   } else {
-    return yield failStates(response, error);
+    if (response?.status !== undefined || !isEmpty(response?.status)) {
+      return yield serverStates(response, type);
+    } else {
+      return yield failStates(response, error);
+    }
   }
 }
 
-//When server responded
+//*****************************************************
+// When server responded with status
+//*****************************************************
 function* serverStates(response) {
   return yield yieldPositiveCodes(response.status, response.data);
 }
 
 function* yieldPositiveCodes(code: StatusCode, response) {
-  yield put(projectActions.hideLoader());
-
   switch (code.toString()) {
     case StatusCode.SUCCESS:
-      return yield all([
-        put(loginActions.onLoginResponse(response)),
-        fork(updateAuthHeader, response.token),
-      ]);
-    case StatusCode.CREATED:
-      break;
+      return yield onSuccessEffects(response);
+    case StatusCode.BAD_REQUEST:
+      return yield onBadRequestEffects(response);
     case StatusCode.ACCEPTED:
       break;
-
     default:
       Alert.alert('STATUS CODE NOT FOUND');
   }
-  console.log(
-    JSON.stringify(response) +
-      '---------' +
-      code +
-      ' >>>>> ' +
-      StatusCode.SUCCESS,
-  );
 }
 
-//*****************************
+function* onSuccessEffects(response) {
+  switch (actionType) {
+    case ActionTypes.LOGIN_REQUEST:
+      return yield all([
+        put(loginActions.onLoginResponse(response)),
+        put(rootActions.hideLoader()),
+
+        fork(updateAuthHeader, response.data.jwt),
+      ]);
+    case ActionTypes.LOGOUT_REQUEST:
+      return yield all([
+        put(loginActions.onLogoutResponse(response)),
+        fork(updateAuthHeader, ''),
+      ]);
+    default:
+      Alert.alert(actionType);
+  }
+}
+
+function* onBadRequestEffects(response) {
+  switch (actionType) {
+    case ActionTypes.LOGIN_REQUEST:
+      return yield all([
+        put(loginActions.loginFailed(actionType, response?.data?.message)),
+        put(rootActions.hideLoader()),
+      ]);
+    case ActionTypes.LOGOUT_REQUEST:
+      Alert.alert(actionType);
+      break;
+    default:
+      Alert.alert(actionType);
+  }
+}
+
+//*****************************************************
 // When server returned error
+//*****************************************************
 function* failStates(response, error) {
   return yield yieldNegativeCodes(processErrorCode(error), response);
 }
@@ -77,24 +120,15 @@ function* yieldNegativeCodes(code: StatusCode, response) {
     case StatusCode.INVALID:
       Alert.alert(code, response?.message?.toString());
       break;
-    //return yield all([put(loginActions.loginFailed())]);
     case StatusCode.TOO_MANY_REQUESTS:
-      //Alert.alert(code, response.message.toString());
-
+      yield put(rootActions.hideLoader());
       break;
     case StatusCode.NO_RESPONSE:
-      // Alert.alert(code, response.message.toString());
-
+      yield put(rootActions.hideLoader());
       break;
-
     default:
       Alert.alert('STATUS CODE NOT FOUND');
   }
 
-  return yield all([
-    put(loginActions.loginFailed(code, response.message.toString())),
-    put(projectActions.hideLoader()),
-  ]);
-
-  //return yield put(projectActions.hideLoader());
+  return yield all([put(rootActions.hideLoader())]);
 }
