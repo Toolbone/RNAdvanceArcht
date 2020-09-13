@@ -5,23 +5,26 @@
  */
 import createReducer from 'app/lib/createReducer';
 import * as types from '../../../system/types';
-import { Alert } from 'react-native';
+import * as Models from '../../../api/Models';
+import { ProductsState } from '../../../api/Models';
 
-const loginInitialState = {
-  isLoggedIn: false,
-  id: 0,
-  token: '',
-  username: '',
-  password: '',
-  message: '',
-  error_code: '',
+export const initialState = {
+  products: [],
+  refreshing: false,
+  page: 1,
 };
 
-export const productListReducer = createReducer(loginInitialState, {
+export const productListReducer = createReducer(initialState, {
   [types.PRODUCT_LIST_REQUEST](state, action) {
     return {
       ...state,
       page: action.page,
+    };
+  },
+  [types.PRODUCT_LIST_RESPONSE](state, action) {
+    return {
+      ...state,
+      products: action.products,
     };
   },
 });

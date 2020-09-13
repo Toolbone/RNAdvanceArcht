@@ -60,7 +60,6 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
   - `/store` - Includes everything you need to set up store.
     - `reducers` - Combines all feature based reducers
     - `sagas` - Combines all feature based sagas
-    - `RemoteData.js` - Set ups store and export things
 
 ## Getting Started
 

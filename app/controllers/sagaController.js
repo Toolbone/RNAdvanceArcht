@@ -9,6 +9,7 @@ import { updateAuthHeader } from '../api/RemoteData';
 import { Alert } from 'react-native';
 import { isEmpty } from 'ramda';
 import * as ActionTypes from '../system/types';
+import * as productActions from '../screens/home/redux/actions';
 
 const StatusCode = Object.freeze({
   SUCCESS: '200',
@@ -25,19 +26,21 @@ const StatusCode = Object.freeze({
 
 let actionType = ActionTypes.DEFAULT;
 
-export function* controlledStates(response, error, type) {
+export function* controlledStates(response, error, type, showLogs = false) {
   //Backend api rules when success
-  console.log(
-    '\n---------\nActionType: ' +
-      actionType +
-      '\nResponse: ' +
-      JSON.stringify(response) +
-      '\nError: ' +
-      JSON.stringify(error) +
-      JSON.stringify(response?.data?.success) +
-      JSON.stringify(response?.data?.data?.message) +
-      '\n---------',
-  );
+  if (showLogs) {
+    console.log(
+      '\n---------\nActionType: ' +
+        actionType +
+        '\nResponse: ' +
+        JSON.stringify(response) +
+        '\nError: ' +
+        JSON.stringify(error) +
+        JSON.stringify(response?.data?.success) +
+        JSON.stringify(response?.data?.data?.message) +
+        '\n---------',
+    );
+  }
   actionType = type;
   if (isEmpty(response?.status) || response === undefined) {
   } else {
@@ -83,6 +86,8 @@ function* onSuccessEffects(response) {
         put(loginActions.onLogoutResponse(response)),
         fork(updateAuthHeader, ''),
       ]);
+    case ActionTypes.PRODUCT_LIST_REQUEST:
+      return yield all([put(productActions.onProductListResponse(response))]);
     default:
       Alert.alert(actionType);
   }
@@ -111,7 +116,9 @@ function* failStates(response, error) {
 }
 
 function processErrorCode(error) {
-  console.log(JSON.stringify(error) + '---------');
+  if (error === undefined) {
+    return;
+  }
   return StatusCode.INVALID;
 }
 

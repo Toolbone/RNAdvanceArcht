@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import DeviceInfo from 'react-native-device-info';
 
 import { navigationRef } from './NavigationService';
@@ -11,6 +11,8 @@ import Login from 'app/screens/login';
 import { StyleSheet, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Loader from '../components/Loader';
+import * as loginActions from '../screens/login/redux/actions';
+import { requestProductList } from '../screens/home/redux/actions';
 
 const Stack = createStackNavigator();
 
@@ -28,11 +30,14 @@ const homeOptions = {
 function App() {
   const isLoggedIn = useSelector((state) => state.loginReducer.isLoggedIn);
   const stackProps = DeviceInfo.isTablet() ? { headerMode: 'none' } : {};
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.loginReducer.token);
+  const onLogout = () => dispatch(loginActions.requestLogout(token));
   let isLoading = useSelector((state) => state.rootReducer.isLoading);
 
   return (
     <NavigationContainer ref={navigationRef}>
-      {/*<Loader modalVisible={isLoading} animationType="fade" />*/}
+      <Loader modalVisible={isLoading} animationType="fade" />
       <Stack.Navigator
         {...stackProps}
         screenOptions={{
@@ -51,7 +56,16 @@ function App() {
             name="Home"
             component={Tabs}
             options={{
-              headerLeft: null,
+              headerLeft: () => (
+                <View style={{ flexDirection: 'row' }}>
+                  <IconButton
+                    icon="logout"
+                    color="#bdc3c7"
+                    size={20}
+                    onPress={onLogout}
+                  />
+                </View>
+              ),
               headerRight: () => (
                 <View style={{ flexDirection: 'row' }}>
                   <IconButton

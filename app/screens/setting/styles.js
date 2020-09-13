@@ -6,6 +6,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  content: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    padding: 4,
+  },
+  item: {
+    height: 100,
+    width: '33%',
+    padding: 4,
+  },
+  photo: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
 });
 
 export default styles;

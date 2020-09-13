@@ -3,4 +3,5 @@
  */
 import * as rootReducer from '../system/reducers';
 import * as loginReducer from '../screens/login/redux/reducers';
-export default Object.assign({}, loginReducer, rootReducer);
+import * as productListReducer from '../screens/home/redux/reducers';
+export default Object.assign({}, rootReducer, loginReducer, productListReducer);
