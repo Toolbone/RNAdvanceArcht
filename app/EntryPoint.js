@@ -11,7 +11,7 @@ import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import Navigator from 'app/navigation';
 import configureStore from 'app/store';
 import Loader from './components/Loader';
-const { persistor, store } = configureStore();
+const { persistStoreConfig, store } = configureStore();
 
 const theme = {
   ...DefaultTheme,
@@ -26,7 +26,9 @@ const theme = {
 export default function EntryPoint() {
   return (
     <Provider store={store}>
-      <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
+      <PersistGate
+        loading={<ActivityIndicator />}
+        persistor={persistStoreConfig}>
         <PaperProvider theme={theme}>
           <Navigator />
         </PaperProvider>
