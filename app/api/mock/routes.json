@@ -1,0 +1,4 @@
+{
+  "/api/v1/auth/token": "/mobileAuthToken",
+  "/api/v1/oauth/token/network?grant_type=password&username=:username": "/loginNetwork"
+}

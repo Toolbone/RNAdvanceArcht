@@ -2,7 +2,6 @@
  * Action creators are functions that create and return actions .
  */
 import * as types from '../../../system/types';
-import {Alert} from 'react-native';
 
 export function requestLogin(username, password) {
   return {

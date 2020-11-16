@@ -9,12 +9,14 @@
     "test": "jest",
     "lint": "eslint .",
     "update:pods": "cd ios && pod install --repo-update && cd ..",
-    "postinstall": "yarn run update:pods"
+    "postinstall": "yarn run update:pods",
+    "mock": "json-server --watch ./app/api/mock/db.json --middlewares ./app/api/mock/headers.js"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.10.0",
     "@react-native-community/cli-debugger-ui": "^4.7.0",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/toolbar-android": "^0.1.0-rc.2",
     "@react-navigation/material-bottom-tabs": "^5.2.16",
     "@react-navigation/material-top-tabs": "^5.2.16",
     "@react-navigation/native": "^5.7.3",

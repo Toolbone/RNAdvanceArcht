@@ -7,7 +7,7 @@ class DialogModal extends Component {
     modalVisible: false,
   };
 
-  setModalVisible = visible => {
+  setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
   };
 

@@ -26,7 +26,7 @@ const StatusCode = Object.freeze({
 
 let actionType = ActionTypes.DEFAULT;
 
-export function* controlledStates(response, error, type, showLogs = false) {
+export function* controlledStates(response, error, type, showLogs = true) {
   //Backend api rules when success
   if (showLogs) {
     console.log(
@@ -105,6 +105,7 @@ function* onBadRequestEffects(response) {
       break;
     default:
       Alert.alert(actionType);
+      break;
   }
 }
 
@@ -135,6 +136,7 @@ function* yieldNegativeCodes(code: StatusCode, response) {
       break;
     default:
       Alert.alert('STATUS CODE NOT FOUND');
+      break;
   }
 
   return yield all([put(rootActions.hideLoader())]);
