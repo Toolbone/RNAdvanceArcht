@@ -1,36 +1,59 @@
 // General api to access data
 import ApiConstants from './ApiConstants';
 import Axios, { AxiosResponse } from 'axios';
+
 import OAuth from 'oauth-1.0a';
-import CryptoJS from 'crypto-js/hmac-sha1';
+import CryptoJS from 'crypto-js';
+import { join } from 'ramda';
 
 const client = Axios.create({
   baseURL: ApiConstants.BASE_URL_SECURE,
+  timeout: 60000,
+  headers: {
+    'Cache-Control': 'no-cache',
+    'User-Agent': 'RNAdvanceArcht--v1.0.0',
+    'X-App-Version': 'v1.0.0',
+  },
 });
 
-const _getOAuth = (): OAuth =>
-  new OAuth({
+const _getOAuth = (): OAuth => {
+  let data = {
     consumer: {
       key: ApiConstants.KEY,
       secret: ApiConstants.SECRET,
     },
-    signature_method: 'HMAC-SHA1',
-    hash_function: (baseString: string, key: string) =>
-      CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA1(baseString, key)),
-  });
-
-const get = async (path: string, params: any): Promise<AxiosResponse> => {
-  console.log(JSON.stringify(params) + '\n\n\n\n---------' + ' >>>>> ');
-  const url = `${ApiConstants.BASE_URL_SECURE}${path}`;
-  return client.get(url, { params: params });
+    signature_method: 'HMAC-SHA256',
+    hash_function: (base_string, key) => {
+      return CryptoJS.HmacSHA256(base_string, key).toString(
+        CryptoJS.enc.Base64,
+      );
+    },
+  };
+  /*if (-1 < ['v1', 'v2'].indexOf(this.version)) {
+    data.last_ampersand = false;
+  }*/
+  return new OAuth(data);
 };
 
-const post = async (path: string, body: any): Promise<AxiosResponse> => {
-  const request = {
-    url: `${ApiConstants.BASE_URL}${path}`,
-    method: 'POST',
+const get = async (path: string, params?: any): Promise<AxiosResponse> => {
+  const config = {
+    url: `${ApiConstants.BASE_URL_SECURE}${path}`,
+    baseURL: ApiConstants.BASE_URL_SECURE,
+    method: 'GET',
+    params: params,
   };
-  return client.post(request.url, body);
+
+  return client.request(config);
+};
+
+const post = async (path: string, params?: any): Promise<AxiosResponse> => {
+  const config = {
+    url: `${ApiConstants.BASE_URL_SECURE}${path}`,
+    baseURL: ApiConstants.BASE_URL_SECURE,
+    method: 'POST',
+    params: params,
+  };
+  return client.request(config);
 };
 
 export const updateAuthHeader = (token) => {

@@ -16,6 +16,7 @@ export const initialState = {
 
 export const productListReducer = createReducer(initialState, {
   [types.PRODUCT_LIST_REQUEST](state, action) {
+    console.log('WHATS INSIDE' + JSON.stringify(action));
     return {
       ...state,
       page: action.page,

@@ -26,6 +26,12 @@ export function fetchProductList(page) {
     consumer_key: ApiConstants.KEY,
     consumer_secret: ApiConstants.SECRET,
   })
-    .then((response) => ({ response }))
-    .catch((error) => ({ error }));
+    .then((response) => {
+      console.log(response.data);
+    })
+    .then((json) => json)
+
+    .catch((error) => {
+      console.log(error.response);
+    });
 }

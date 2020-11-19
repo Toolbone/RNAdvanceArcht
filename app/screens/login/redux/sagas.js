@@ -9,22 +9,29 @@ import { call, put, takeEvery } from 'redux-saga/effects';
 import * as sagaController from '../../../controllers/sagaController';
 import * as types from '../../../system/types';
 import { logoutUser, loginUser } from '../../../api/Client';
+import * as R from 'ramda';
 
 export const loginSagas = [
-  takeEvery(types.LOGIN_REQUEST, loginAsync),
-  takeEvery(types.LOGOUT_REQUEST, logoutAsync),
+  takeEvery(types.LOGIN_REQUEST, loginRequestAsync),
+  takeEvery(types.LOGOUT_REQUEST, logoutRequestAsync),
 ];
 
-export function* loginAsync(action) {
+export function* loginRequestAsync(action) {
   const { response, error } = yield call(
     loginUser,
     action.username,
     action.password,
   );
-  yield sagaController.controlledStates(response, error, action.type);
+
+  if (R.isNil(error)) {
+    const { status } = response;
+    yield sagaController.controlledStates(response, action.type, status);
+  } else {
+    yield sagaController.controlledStates(response, action.type, error);
+  }
 }
 
-export function* logoutAsync(action) {
+export function* logoutRequestAsync(action) {
   const { response, error } = yield call(logoutUser, action.token);
   yield sagaController.controlledStates(response, error, action.type);
 }

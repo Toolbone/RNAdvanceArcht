@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,7 +12,7 @@ import { StyleSheet, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Loader from '../components/Loader';
 import * as loginActions from '../screens/login/redux/actions';
-import { requestProductList } from '../screens/home/redux/actions';
+import * as store from '../screens/login/redux/reducers';
 
 const Stack = createStackNavigator();
 
@@ -27,7 +27,7 @@ const homeOptions = {
   },
 };
 
-function App() {
+export default function App() {
   const isLoggedIn = useSelector((state) => state.loginReducer.isLoggedIn);
   const stackProps = DeviceInfo.isTablet() ? { headerMode: 'none' } : {};
   const dispatch = useDispatch();
@@ -89,8 +89,6 @@ function App() {
             name="Login"
             component={Login}
             options={{
-              // When logging out, a pop animation feels intuitive
-              // You can remove this if you want the default 'push' animation
               animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
             }}
           />
@@ -99,44 +97,3 @@ function App() {
     </NavigationContainer>
   );
 }
-
-export default App;
-/*
-<Stack.Navigator>
-        {isLoggedIn ? (
-          <Stack.Screen
-            name="Home"
-            component={Tabs}
-            options={{
-              headerLeft: null,
-              headerRight: () => (
-                <View style={{ flexDirection: 'row' }}>
-                  <IconButton
-                    icon="settings"
-                    color="#bdc3c7"
-                    size={20}
-                    onPress={() => {}}
-                  />
-                  <IconButton
-                    icon="bell"
-                    color="#bdc3c7"
-                    size={20}
-                    onPress={() => {}}
-                  />
-                </View>
-              ),
-            }}
-          />
-        ) : (
-          <Stack.Screen
-            name="Login"
-            component={Login}
-            options={{
-              // When logging out, a pop animation feels intuitive
-              // You can remove this if you want the default 'push' animation
-              animationTypeForReplace: isLoggedIn ? 'push' : 'pop',
-            }}
-          />
-        )}
-      </Stack.Navigator>
- */

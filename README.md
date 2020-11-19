@@ -56,7 +56,7 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
   - `/lib` - lib helper files
   - `/navigation` - All navigation related stuff including helpers functions and navigation stack
     - `NavigationService.js` - Service class for navigation - can be used without using props
-    - `NavigationStack.js` - Stack to define navigation. you can split things further if needed.
+    - `App.js` - Stack to define navigation. you can split things further if needed.
   - `/store` - Includes everything you need to set up store.
     - `reducers` - Combines all feature based reducers
     - `sagas` - Combines all feature based sagas

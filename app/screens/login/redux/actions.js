@@ -6,16 +6,22 @@ import * as types from '../../../system/types';
 export function requestLogin(username, password) {
   return {
     type: types.LOGIN_REQUEST,
+    token: '',
+    message: '',
     username,
     password,
+    isRequesting: true,
   };
 }
 
-export function onLoginResponse(response) {
+export function onLoginResponse(response, message) {
   return {
     type: types.LOGIN_RESPONSE,
-    token: response.data.jwt,
-    response,
+    token: response.data?.data?.jwt,
+    message: message,
+    username: '',
+    password: '',
+    isRequesting: false,
   };
 }
 

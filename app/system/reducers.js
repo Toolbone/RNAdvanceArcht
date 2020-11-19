@@ -23,4 +23,11 @@ export const rootReducer = createReducer(initialState, {
       isLoading: action.isLoading,
     };
   },
+
+  [types.ENABLE_LOADER](state, action) {
+    return {
+      ...state,
+      isLoading: action.isLoading,
+    };
+  },
 });

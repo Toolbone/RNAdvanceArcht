@@ -7,41 +7,48 @@ import * as loginActions from '../screens/login/redux/actions';
 import * as rootActions from '../system/actions';
 import { updateAuthHeader } from '../api/RemoteData';
 import { Alert } from 'react-native';
-import { isEmpty } from 'ramda';
 import * as ActionTypes from '../system/types';
 import * as productActions from '../screens/home/redux/actions';
+import * as types from '../system/types';
 
 const StatusCode = Object.freeze({
-  SUCCESS: '200',
-  CREATED: '201',
-  ACCEPTED: '202',
-  BAD_REQUEST: '400',
-  BAD_GATEWAY: '502',
-  SERVICE_UNAVAILABLE: '503',
-  TOO_MANY_REQUESTS: '429',
-  INVALID: '403',
-  NO_RESPONSE: '444',
-  INTERNAL_SERVER_ERROR: '500',
+  SUCCESS: 200,
+  CREATED: 201,
+  ACCEPTED: 202,
+  INVALID_CREDENTIALS: 400,
+  BAD_REQUEST: 404,
+  BAD_GATEWAY: 502,
+  SERVICE_UNAVAILABLE: 503,
+  TOO_MANY_REQUESTS: 429,
+  NO_RESPONSE: 444,
+  INTERNAL_SERVER_ERROR: 500,
 });
 
 let actionType = ActionTypes.DEFAULT;
+let statusCode = null;
 
-export function* controlledStates(response, error, type, showLogs = true) {
-  //Backend api rules when success
-  if (showLogs) {
-    console.log(
-      '\n---------\nActionType: ' +
-        actionType +
-        '\nResponse: ' +
-        JSON.stringify(response) +
-        '\nError: ' +
-        JSON.stringify(error) +
-        JSON.stringify(response?.data?.success) +
-        JSON.stringify(response?.data?.data?.message) +
-        '\n---------',
-    );
+export function* controlledStates(
+  response,
+  responseType,
+  code,
+  showLogs = true,
+) {
+  statusCode = code;
+  showLogs && displayLogs(response, responseType);
+
+  switch (responseType) {
+    case types.LOGIN_REQUEST:
+      return yield onLoginRequest(response);
+    case types.LOGOUT_RESPONSE:
+      console.log('Login response' + JSON.stringify(response));
+      break;
+    case types.PRODUCT_LIST_REQUEST:
+      console.log('Login response' + JSON.stringify(response));
+      break;
+    default:
+      return;
   }
-  actionType = type;
+  /*actionType = type;
   if (isEmpty(response?.status) || response === undefined) {
   } else {
     if (response?.status !== undefined || !isEmpty(response?.status)) {
@@ -49,9 +56,37 @@ export function* controlledStates(response, error, type, showLogs = true) {
     } else {
       return yield failStates(response, error);
     }
-  }
+  }*/
 }
 
+function displayLogs(response, type) {
+  const liner = '\n____________________________\n';
+  const data = 'Response: ' + JSON.stringify(response) + '\nCode:' + statusCode;
+  console.log(liner + type + '\n' + data + liner);
+}
+
+function* onLoginRequest(response) {
+  //Set the store values for login
+  let message = '';
+  switch (statusCode) {
+    case StatusCode.SUCCESS:
+      message = 'Personalizing...';
+      break;
+    case StatusCode.INVALID_CREDENTIALS:
+      message = 'Sorry, Wrong user credentials';
+      break;
+    default:
+      message = 'Please try again';
+      break;
+  }
+  return yield all([
+    put(loginActions.onLoginResponse(response, message)),
+    put(rootActions.hideLoader()),
+    fork(updateAuthHeader, response.data.jwt),
+
+    put(productActions.requestProductList(10)),
+  ]);
+}
 //*****************************************************
 // When server responded with status
 //*****************************************************
