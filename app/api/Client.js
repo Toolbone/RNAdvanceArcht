@@ -20,9 +20,9 @@ export function logoutUser(token) {
     .catch((error) => ({ error }));
 }
 
-export function fetchProductList(page) {
+export function fetchProductList(perPage) {
   return RemoteData.get(ApiConstants.PRODUCT_LIST, {
-    per_page: page,
+    per_page: perPage,
     consumer_key: ApiConstants.KEY,
     consumer_secret: ApiConstants.SECRET,
   })

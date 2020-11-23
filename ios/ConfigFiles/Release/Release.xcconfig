@@ -1,0 +1,10 @@
+//
+//  Release.xcconfig
+//  RNAdvanceArcht
+//
+//  Created by Mojave on 23/11/20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+APP_DISPLAY_NAME = RNAA-Release

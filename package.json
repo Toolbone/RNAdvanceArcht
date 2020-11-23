@@ -5,6 +5,19 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+
+    "set:env:debug": "node ./scripts/set-env.js --env debug",
+    "set:env:staging": "node ./scripts/set-env.js --env staging",
+    "set:env:release": "node ./scripts/set-env.js --env release",
+
+    "run:android:debug": "yarn set:env:debug && yarn android --variant debug",
+    "run:android:staging": "yarn set:env:staging && yarn android --variant staging",
+    "run:android:release": "yarn set:env:release && yarn android --variant release",
+
+    "run:ios:debug": "yarn set:env:debug && yarn ios --configuration Debug",
+    "run:ios:staging": "yarn set:env:staging && yarn ios --configuration Staging",
+    "run:ios:release": "yarn set:env:release && yarn ios --configuration Release",
+
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
@@ -52,7 +65,8 @@
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "16.13.1",
+    "yargs": "^16.1.1"
   },
   "jest": {
     "preset": "react-native"

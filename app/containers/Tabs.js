@@ -5,7 +5,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 import { useSafeArea } from 'react-native-safe-area-context';
-import { Portal, FAB } from 'react-native-paper';
+import { Portal, FAB, Text } from 'react-native-paper';
 import DeviceInfo from 'react-native-device-info';
 
 import TabBar from 'app/containers/TabBar';
@@ -65,6 +65,7 @@ function Tabs() {
         <FAB
           visible={isFocused} // show FAB only when this screen is focused
           icon="cart"
+          small={true}
           label={'Cart'}
           style={[
             styles.fab,
@@ -82,6 +83,9 @@ const styles = StyleSheet.create({
   fab: {
     position: 'absolute',
     right: 16,
+  },
+  label: {
+    color: '#ffffff',
   },
 });
 

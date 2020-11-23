@@ -19,7 +19,7 @@ export const productListReducer = createReducer(initialState, {
     console.log('WHATS INSIDE' + JSON.stringify(action));
     return {
       ...state,
-      page: action.page,
+      page: action.perPage,
     };
   },
   [types.PRODUCT_LIST_RESPONSE](state, action) {

@@ -3,10 +3,10 @@
  */
 import * as types from '../../../system/types';
 
-export function requestProductList(page) {
+export function requestProductList(perPage) {
   return {
     type: types.PRODUCT_LIST_REQUEST,
-    page: page,
+    perPage: perPage,
   };
 }
 
