@@ -39,7 +39,7 @@ export function* controlledStates(
     case types.LOGIN_REQUEST:
       return yield onLoginRequest(response);
     case types.LOGOUT_REQUEST:
-      return yield onLogoutRequest(response);
+      return yield onLogoutRequest();
     case types.PRODUCT_LIST_REQUEST:
       return yield onProductRequest(response);
     default:
@@ -83,7 +83,8 @@ function* onLoginRequest(response) {
 
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
     put(rootActions.hideLoader()),
-    put(productActions.requestProductList()),
+
+    put(productActions.requestProductList(20)),
   ]);
 }
 
