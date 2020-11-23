@@ -11,10 +11,11 @@ export function requestLogin(username, password) {
     username,
     password,
     isRequesting: true,
+    isLoggedIn: false,
   };
 }
 
-export function onLoginResponse(response, message) {
+export function onLoginResponse(response, message, isLoggedIn) {
   return {
     type: types.LOGIN_RESPONSE,
     token: response.data?.data?.jwt,
@@ -22,19 +23,31 @@ export function onLoginResponse(response, message) {
     username: '',
     password: '',
     isRequesting: false,
+    isLoggedIn: isLoggedIn,
   };
 }
 
-export function requestLogout(token) {
+export function requestLogout() {
   return {
     type: types.LOGOUT_REQUEST,
-    token: token,
+    token: '',
+    message: '',
+    username: '',
+    password: '',
+    isRequesting: false,
+    isLoggedIn: false,
   };
 }
 
 export function onLogoutResponse() {
   return {
     type: types.LOGOUT_RESPONSE,
+    token: '',
+    message: '',
+    username: '',
+    password: '',
+    isRequesting: false,
+    isLoggedIn: false,
   };
 }
 

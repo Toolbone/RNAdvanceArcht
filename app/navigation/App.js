@@ -12,7 +12,6 @@ import { StyleSheet, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Loader from '../components/Loader';
 import * as loginActions from '../screens/login/redux/actions';
-import * as store from '../screens/login/redux/reducers';
 
 const Stack = createStackNavigator();
 
@@ -68,12 +67,6 @@ export default function App() {
               ),
               headerRight: () => (
                 <View style={{ flexDirection: 'row' }}>
-                  <IconButton
-                    icon="settings"
-                    color="#bdc3c7"
-                    size={20}
-                    onPress={() => {}}
-                  />
                   <IconButton
                     icon="bell"
                     color="#bdc3c7"

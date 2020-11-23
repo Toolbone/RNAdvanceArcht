@@ -24,7 +24,6 @@ const StatusCode = Object.freeze({
   INTERNAL_SERVER_ERROR: 500,
 });
 
-let actionType = ActionTypes.DEFAULT;
 let statusCode = null;
 
 export function* controlledStates(
@@ -39,12 +38,10 @@ export function* controlledStates(
   switch (responseType) {
     case types.LOGIN_REQUEST:
       return yield onLoginRequest(response);
-    case types.LOGOUT_RESPONSE:
-      console.log('Login response' + JSON.stringify(response));
-      break;
+    case types.LOGOUT_REQUEST:
+      return yield onLogoutRequest(response);
     case types.PRODUCT_LIST_REQUEST:
-      console.log('Login response' + JSON.stringify(response));
-      break;
+      return yield onProductRequest(response);
     default:
       return;
   }
@@ -68,9 +65,11 @@ function displayLogs(response, type) {
 function* onLoginRequest(response) {
   //Set the store values for login
   let message = '';
+  let isLoggedIn = false;
   switch (statusCode) {
     case StatusCode.SUCCESS:
       message = 'Personalizing...';
+      isLoggedIn = true;
       break;
     case StatusCode.INVALID_CREDENTIALS:
       message = 'Sorry, Wrong user credentials';
@@ -80,99 +79,18 @@ function* onLoginRequest(response) {
       break;
   }
   return yield all([
-    put(loginActions.onLoginResponse(response, message)),
-    put(rootActions.hideLoader()),
-    fork(updateAuthHeader, response.data.jwt),
+    fork(updateAuthHeader, response.data?.data?.jwt),
 
-    put(productActions.requestProductList(10)),
+    put(loginActions.onLoginResponse(response, message, isLoggedIn)),
+    put(rootActions.hideLoader()),
+    put(productActions.requestProductList()),
   ]);
 }
-//*****************************************************
-// When server responded with status
-//*****************************************************
-function* serverStates(response) {
-  return yield yieldPositiveCodes(response.status, response.data);
+
+function* onProductRequest(response) {
+  return yield all([put(productActions.onProductListResponse(response.data))]);
 }
 
-function* yieldPositiveCodes(code: StatusCode, response) {
-  switch (code.toString()) {
-    case StatusCode.SUCCESS:
-      return yield onSuccessEffects(response);
-    case StatusCode.BAD_REQUEST:
-      return yield onBadRequestEffects(response);
-    case StatusCode.ACCEPTED:
-      break;
-    default:
-      Alert.alert('STATUS CODE NOT FOUND');
-  }
-}
-
-function* onSuccessEffects(response) {
-  switch (actionType) {
-    case ActionTypes.LOGIN_REQUEST:
-      return yield all([
-        put(loginActions.onLoginResponse(response)),
-        put(rootActions.hideLoader()),
-
-        fork(updateAuthHeader, response.data.jwt),
-      ]);
-    case ActionTypes.LOGOUT_REQUEST:
-      return yield all([
-        put(loginActions.onLogoutResponse(response)),
-        fork(updateAuthHeader, ''),
-      ]);
-    case ActionTypes.PRODUCT_LIST_REQUEST:
-      return yield all([put(productActions.onProductListResponse(response))]);
-    default:
-      Alert.alert(actionType);
-  }
-}
-
-function* onBadRequestEffects(response) {
-  switch (actionType) {
-    case ActionTypes.LOGIN_REQUEST:
-      return yield all([
-        put(loginActions.loginFailed(actionType, response?.data?.message)),
-        put(rootActions.hideLoader()),
-      ]);
-    case ActionTypes.LOGOUT_REQUEST:
-      Alert.alert(actionType);
-      break;
-    default:
-      Alert.alert(actionType);
-      break;
-  }
-}
-
-//*****************************************************
-// When server returned error
-//*****************************************************
-function* failStates(response, error) {
-  return yield yieldNegativeCodes(processErrorCode(error), response);
-}
-
-function processErrorCode(error) {
-  if (error === undefined) {
-    return;
-  }
-  return StatusCode.INVALID;
-}
-
-function* yieldNegativeCodes(code: StatusCode, response) {
-  switch (code) {
-    case StatusCode.INVALID:
-      Alert.alert(code, response?.message?.toString());
-      break;
-    case StatusCode.TOO_MANY_REQUESTS:
-      yield put(rootActions.hideLoader());
-      break;
-    case StatusCode.NO_RESPONSE:
-      yield put(rootActions.hideLoader());
-      break;
-    default:
-      Alert.alert('STATUS CODE NOT FOUND');
-      break;
-  }
-
-  return yield all([put(rootActions.hideLoader())]);
+function* onLogoutRequest() {
+  return yield all([put(loginActions.onLogoutResponse())]);
 }

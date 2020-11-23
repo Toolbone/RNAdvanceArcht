@@ -26,6 +26,7 @@ export const loginReducer = createReducer(loginInitialState, {
       username: action.username,
       password: action.password,
       isRequesting: action.isRequesting,
+      isLoggedIn: action.isLoggedIn,
       message: action.message,
     };
   },
@@ -36,6 +37,7 @@ export const loginReducer = createReducer(loginInitialState, {
       token: action.token,
       statusCode: action.statusCode,
       isRequesting: action.isRequesting,
+      isLoggedIn: action.isLoggedIn,
       message: action.message,
     };
   },
@@ -46,16 +48,28 @@ export const loginReducer = createReducer(loginInitialState, {
       message: action.message,
     };
   },
-  [types.LOGOUT_REQUEST](state) {
+  [types.LOGOUT_REQUEST](state, action) {
+    console.log('WHATS INSIDE' + JSON.stringify(action));
+
     return {
       ...state,
-      isLoggedIn: false,
-      token: state.token,
+      username: action.username,
+      password: action.password,
+      isRequesting: action.isRequesting,
+      isLoggedIn: action.isLoggedIn,
+      message: action.message,
     };
   },
-  [types.LOGOUT_RESPONSE](state) {
+  [types.LOGOUT_RESPONSE](state, action) {
+    console.log('WHATS INSIDE' + JSON.stringify(action));
+
     return {
       ...state,
+      username: action.username,
+      password: action.password,
+      isRequesting: action.isRequesting,
+      isLoggedIn: action.isLoggedIn,
+      message: action.message,
     };
   },
 });

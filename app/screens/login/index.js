@@ -67,7 +67,7 @@ export default function Login() {
         disabled={isRequesting}
         loading={isRequesting}
         style={styles.button}>
-        {`Login  ${isRequesting}`}
+        {`Login`}
       </Button>
 
       <Text style={styles.login}>{message}</Text>

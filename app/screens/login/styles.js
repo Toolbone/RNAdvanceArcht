@@ -13,12 +13,14 @@ const styles = StyleSheet.create({
 
   input: {
     width: 200,
-    height: 16,
-    padding: 10,
+    height: 30,
     marginBottom: 10,
+    borderRadius: 6,
   },
+
   button: {
     marginBottom: 10,
+    borderRadius: 6,
   },
 });
 

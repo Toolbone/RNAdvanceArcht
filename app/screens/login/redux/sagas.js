@@ -33,5 +33,11 @@ export function* loginRequestAsync(action) {
 
 export function* logoutRequestAsync(action) {
   const { response, error } = yield call(logoutUser, action.token);
-  yield sagaController.controlledStates(response, error, action.type);
+
+  if (R.isNil(error)) {
+    const { status } = response;
+    yield sagaController.controlledStates(response, action.type, status);
+  } else {
+    yield sagaController.controlledStates(response, action.type, error);
+  }
 }

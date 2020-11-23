@@ -43,29 +43,29 @@ function Tabs() {
           name="Setting"
           component={Setting}
           options={{
-            tabBarIcon: 'settings',
+            tabBarIcon: 'image',
           }}
         />
         <Tab.Screen
           name="About"
           component={About}
           options={{
-            tabBarIcon: 'information-variant',
+            tabBarIcon: 'gift',
           }}
         />
         <Tab.Screen
           name="Profile"
           component={Profile}
           options={{
-            tabBarIcon: 'account-multiple',
+            tabBarIcon: 'account',
           }}
         />
       </Tab.Navigator>
       <Portal>
         <FAB
           visible={isFocused} // show FAB only when this screen is focused
-          icon="plus-box"
-          label={'Create new'}
+          icon="cart"
+          label={'Cart'}
           style={[
             styles.fab,
             {

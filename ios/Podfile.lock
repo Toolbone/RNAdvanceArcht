@@ -306,9 +306,9 @@ PODS:
     - React
   - RNGestureHandler (1.8.0):
     - React
-  - RNReanimated (1.13.1):
-    - React
-  - RNScreens (2.14.0):
+  - RNReanimated (1.13.2):
+    - React-Core
+  - RNScreens (2.15.0):
     - React-Core
   - RNVectorIcons (6.7.0):
     - React
@@ -505,8 +505,8 @@ SPEC CHECKSUMS:
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNDeviceInfo: c5f8f3a456adcbba405ace475254b08febc4c095
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
-  RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
-  RNScreens: 2e278a90eb15092ed261d4f2271e3fc9b60d08d4
+  RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
+  RNScreens: 2ad555d4d9fa10b91bb765ca07fe9b29d59573f0
   RNVectorIcons: 368d6d8b8301224e5ffb6254191f4f8876c2be0d
   toolbar-android: 85f3ef4d691469f2d304e7dee4bca013aa1ba1ff
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598

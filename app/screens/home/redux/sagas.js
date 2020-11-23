@@ -1,7 +1,7 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
+import { call, takeEvery } from 'redux-saga/effects';
 import * as sagaController from '../../../controllers/sagaController';
 import * as types from '../../../system/types';
-import { fetchProductList, loginUser } from '../../../api/Client';
+import { fetchProductList } from '../../../api/Client';
 import * as R from 'ramda';
 
 export const productListSagas = [
@@ -12,10 +12,8 @@ export function* productListAsync(action) {
   const { response, error } = yield call(fetchProductList, action.page);
 
   if (R.isNil(error)) {
-    console.log('response:' + response);
-    console.log('error:' + error);
-    //const { status } = response;
-    //yield sagaController.controlledStates(response, action.type, status);
+    const { status } = response;
+    yield sagaController.controlledStates(response, action.type, status);
   } else {
     yield sagaController.controlledStates(response, action.type, error);
   }
