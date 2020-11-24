@@ -1,4 +1,4 @@
-#  🏆 React Native - WooCommerce - Advance Architecture 🏆 
+#  🏆 React Native - WooCommerce - Advance Architecture
 
 [![React Native](https://img.shields.io/badge/React%20Native-v0.63.2-green.svg)](https://facebook.github.io/react-native/)
 [![React Navigation V5](https://img.shields.io/badge/React%20Navigation-v5.7.3-blue.svg)](https://reactnavigation.org/)
