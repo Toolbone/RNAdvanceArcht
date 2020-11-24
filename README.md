@@ -23,6 +23,7 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
 - [Redux Saga](https://redux-saga.js.org/)
 - [Redux Persist](https://github.com/rt2zz/redux-persist/)
 - [Axios](https://github.com/axios/axios)
+- [JSON Server](https://github.com/typicode/json-server)
 - [Reselect](https://github.com/reduxjs/reselect)
 - [Jest](https://facebook.github.io/jest/)
 - [Eslint](http://eslint.org/) ([Airbnb config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb))
@@ -47,7 +48,7 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
   - `/controllers` - This includes centralise error handling mechanism and other Project controllers
   - `/systems` - Project redux elements (actions and reducers), constants, types
   - `/screens` - Feature level containers that holds the entire screen or page 
-    - `login`- Login Feature
+    - `Login`- Login Feature
         - `redux`- Redux state managing files
           - `reducers` - Reducer associated with this feature [might be 0..* or 0..0]
           - `sagas` - Sagas related with this particular feature [might be 0..* or 1..*]
@@ -96,7 +97,7 @@ If you are sure the module exists, try these steps:
  3. Reset Metro's cache: yarn start --reset-cache
  4. Remove the cache: rm -rf /tmp/metro-*
  
- If icons not showing properly
+ If icons not showing properly(only do once)
  * react-native link react-native-vector-icons
 
 To kill process
@@ -110,10 +111,14 @@ Extra tool commands for gitif you want to push your local files to remote files
 ## Todo by Priority
 
  * [X] Use Axios for HTTP client
+ * [X] Config a development environments
+    * [X] iOS
+    * [ ] Android
  * [ ] More Screen Flow
-     * [ ] Product List
-     * [ ] Product Detail
+     * [X] Product List
+     * [X] Product Detail
+     * [ ] Cart and Order List
+ * [ ] Use JSON-Server for API mock
  * [ ] Unit Tests   
- * [ ] Set oauth 1.0 encrypted
  * [ ] Clean UI
  

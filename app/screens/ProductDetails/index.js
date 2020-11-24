@@ -32,7 +32,7 @@ export default function ProductDetails() {
             {currencyFormat(parseInt(product?.price, 10))}
           </Text>
           <Text style={styles.description}>
-            {removeHtmlTag(product?.description)}
+            {product?.slug + ' - ' + removeHtmlTag(product?.description)}
           </Text>
         </View>
         <View style={styles.starContainer}>
