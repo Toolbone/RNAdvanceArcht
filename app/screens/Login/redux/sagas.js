@@ -17,7 +17,7 @@ export const loginSagas = [
 ];
 
 export function* loginRequestAsync(action) {
-  const { response, error } = yield call(
+  const { response, error, json } = yield call(
     loginUser,
     action.username,
     action.password,

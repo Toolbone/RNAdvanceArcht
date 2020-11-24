@@ -51,7 +51,7 @@ function setEnvironment() {
     __dirname,
     '..',
     'app',
-    'config',
+    'api',
     'env',
     'index.js',
   );

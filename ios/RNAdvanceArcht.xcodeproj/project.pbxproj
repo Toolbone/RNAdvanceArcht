@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* RNAdvanceArchtTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNAdvanceArchtTests.m */; };
 		418377613A4EA5CD6E810015 /* libPods-RNAdvanceArcht.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89E31D38D83BBC9CD2784F6 /* libPods-RNAdvanceArcht.a */; };
 		61647B19C81B9E293796A660 /* libPods-RNAdvanceArcht-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3F594446491EED6A580174 /* libPods-RNAdvanceArcht-tvOSTests.a */; };
+		64264AB9AE3021F5E7A16403 /* libPods-RNAdvanceArcht.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89E31D38D83BBC9CD2784F6 /* libPods-RNAdvanceArcht.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		86801581D60E6F59459D2032 /* libPods-RNAdvanceArcht-RNAdvanceArchtTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF103A652A9EB44A53BE9278 /* libPods-RNAdvanceArcht-RNAdvanceArchtTests.a */; };
 		EE61553E8341AD8438982DCD /* libPods-RNAdvanceArcht-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4436119F22B164D283520812 /* libPods-RNAdvanceArcht-tvOS.a */; };
@@ -44,6 +45,7 @@
 		00E356EE1AD99517003FC87E /* RNAdvanceArchtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNAdvanceArchtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNAdvanceArchtTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNAdvanceArchtTests.m; sourceTree = "<group>"; };
+		02F8B9A8EBEA43C39299DB17 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNAdvanceArcht.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNAdvanceArcht.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RNAdvanceArcht/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RNAdvanceArcht/AppDelegate.m; sourceTree = "<group>"; };
@@ -51,25 +53,40 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNAdvanceArcht/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNAdvanceArcht/main.m; sourceTree = "<group>"; };
 		19FFE5B11DDB20DDD947FF4F /* Pods-RNAdvanceArcht-RNAdvanceArchtTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-RNAdvanceArchtTests.release.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-RNAdvanceArchtTests/Pods-RNAdvanceArcht-RNAdvanceArchtTests.release.xcconfig"; sourceTree = "<group>"; };
-		2A102DE834A99EB054C89F20 /* Pods-RNAdvanceArcht.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht.release.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht/Pods-RNAdvanceArcht.release.xcconfig"; sourceTree = "<group>"; };
+		24784B9D9FC046DD93F0FD4D /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		27E4B5E821E7447E99218116 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		2854F571923BBD96CFB3C26D /* Pods-RNAdvanceArcht.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht.release.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht/Pods-RNAdvanceArcht.release.xcconfig"; sourceTree = "<group>"; };
+		29C69A8BA2390AB2320F75D7 /* Pods-RNAdvanceArcht.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht.staging.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht/Pods-RNAdvanceArcht.staging.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNAdvanceArcht-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNAdvanceArcht-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNAdvanceArcht-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNAdvanceArcht-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		31899878A617E9DD67F49F96 /* Pods-RNAdvanceArcht.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht.debug.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht/Pods-RNAdvanceArcht.debug.xcconfig"; sourceTree = "<group>"; };
+		302911332CF54A1485394FA5 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		30D17C1D228B4A4F8652A981 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		342B911C9B234509BB0D4FE7 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		4436119F22B164D283520812 /* libPods-RNAdvanceArcht-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNAdvanceArcht-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B719A7D40644A1D814B4272 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		4D3F594446491EED6A580174 /* libPods-RNAdvanceArcht-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNAdvanceArcht-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57277E56BE908F22F69CABDF /* Pods-RNAdvanceArcht-RNAdvanceArchtTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-RNAdvanceArchtTests.staging.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-RNAdvanceArchtTests/Pods-RNAdvanceArcht-RNAdvanceArchtTests.staging.xcconfig"; sourceTree = "<group>"; };
-		62938150AA7AB0FF4F61555F /* Pods-RNAdvanceArcht.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht.staging.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht/Pods-RNAdvanceArcht.staging.xcconfig"; sourceTree = "<group>"; };
 		67100AEB7CBD147BDC2E5EA9 /* Pods-RNAdvanceArcht-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-tvOSTests/Pods-RNAdvanceArcht-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A6F7F52E16E477E80D43C80 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		6A8FCB82765841BA806142E5 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		6EA6AEF1564DABFDE9BCBD90 /* Pods-RNAdvanceArcht-tvOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-tvOSTests.staging.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-tvOSTests/Pods-RNAdvanceArcht-tvOSTests.staging.xcconfig"; sourceTree = "<group>"; };
 		6F3A0971EAE0313505AD6369 /* Pods-RNAdvanceArcht-tvOS.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-tvOS.staging.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-tvOS/Pods-RNAdvanceArcht-tvOS.staging.xcconfig"; sourceTree = "<group>"; };
 		7411E68DC9C1DD8C2A7E4BDE /* Pods-RNAdvanceArcht-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-tvOSTests/Pods-RNAdvanceArcht-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79ECB71BAD2DE85F344F07F1 /* Pods-RNAdvanceArcht.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht.debug.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht/Pods-RNAdvanceArcht.debug.xcconfig"; sourceTree = "<group>"; };
 		7DB5BE54ADAB1F6E986DD404 /* Pods-RNAdvanceArcht-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-tvOS/Pods-RNAdvanceArcht-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNAdvanceArcht/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83C0B84A4F274188B19B9156 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		84D15C74873F44B0BC348E73 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		903241AA37A8400AB91C171C /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		93B0843904E74D2AB3CF95AF /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		A03A27A0051A41868E913305 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		AB340251FE2B4A0FE4F709F3 /* Pods-RNAdvanceArcht-RNAdvanceArchtTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-RNAdvanceArchtTests.debug.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-RNAdvanceArchtTests/Pods-RNAdvanceArcht-RNAdvanceArchtTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACD46CA97EFC4C1EAD2ABA52 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		B07DD174256BFB420047EF8D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		B07DD175256BFB630047EF8D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		B07DD176256BFBD40047EF8D /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		D89E31D38D83BBC9CD2784F6 /* libPods-RNAdvanceArcht.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNAdvanceArcht.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF010A67421E4318B1AE2323 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		DF165C5B7020AABBEDD7E604 /* Pods-RNAdvanceArcht-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAdvanceArcht-tvOS.release.xcconfig"; path = "Target Support Files/Pods-RNAdvanceArcht-tvOS/Pods-RNAdvanceArcht-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -90,6 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418377613A4EA5CD6E810015 /* libPods-RNAdvanceArcht.a in Frameworks */,
+				64264AB9AE3021F5E7A16403 /* libPods-RNAdvanceArcht.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +191,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBE90282EC5D6E81D69C04E1 /* Pods */,
+				8D81217026224438B54EB609 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -188,6 +207,29 @@
 				2D02E4901E0B4A5D006451C7 /* RNAdvanceArcht-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8D81217026224438B54EB609 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				02F8B9A8EBEA43C39299DB17 /* AntDesign.ttf */,
+				DF010A67421E4318B1AE2323 /* Entypo.ttf */,
+				4B719A7D40644A1D814B4272 /* EvilIcons.ttf */,
+				342B911C9B234509BB0D4FE7 /* Feather.ttf */,
+				ACD46CA97EFC4C1EAD2ABA52 /* FontAwesome.ttf */,
+				93B0843904E74D2AB3CF95AF /* FontAwesome5_Brands.ttf */,
+				84D15C74873F44B0BC348E73 /* FontAwesome5_Regular.ttf */,
+				30D17C1D228B4A4F8652A981 /* FontAwesome5_Solid.ttf */,
+				24784B9D9FC046DD93F0FD4D /* Fontisto.ttf */,
+				A03A27A0051A41868E913305 /* Foundation.ttf */,
+				83C0B84A4F274188B19B9156 /* Ionicons.ttf */,
+				27E4B5E821E7447E99218116 /* MaterialCommunityIcons.ttf */,
+				903241AA37A8400AB91C171C /* MaterialIcons.ttf */,
+				302911332CF54A1485394FA5 /* Octicons.ttf */,
+				6A6F7F52E16E477E80D43C80 /* SimpleLineIcons.ttf */,
+				6A8FCB82765841BA806142E5 /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B07DD170256BFA5E0047EF8D /* ConfigFiles */ = {
@@ -227,18 +269,18 @@
 		BBE90282EC5D6E81D69C04E1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31899878A617E9DD67F49F96 /* Pods-RNAdvanceArcht.debug.xcconfig */,
-				2A102DE834A99EB054C89F20 /* Pods-RNAdvanceArcht.release.xcconfig */,
 				AB340251FE2B4A0FE4F709F3 /* Pods-RNAdvanceArcht-RNAdvanceArchtTests.debug.xcconfig */,
 				19FFE5B11DDB20DDD947FF4F /* Pods-RNAdvanceArcht-RNAdvanceArchtTests.release.xcconfig */,
 				7DB5BE54ADAB1F6E986DD404 /* Pods-RNAdvanceArcht-tvOS.debug.xcconfig */,
 				DF165C5B7020AABBEDD7E604 /* Pods-RNAdvanceArcht-tvOS.release.xcconfig */,
 				7411E68DC9C1DD8C2A7E4BDE /* Pods-RNAdvanceArcht-tvOSTests.debug.xcconfig */,
 				67100AEB7CBD147BDC2E5EA9 /* Pods-RNAdvanceArcht-tvOSTests.release.xcconfig */,
-				62938150AA7AB0FF4F61555F /* Pods-RNAdvanceArcht.staging.xcconfig */,
 				57277E56BE908F22F69CABDF /* Pods-RNAdvanceArcht-RNAdvanceArchtTests.staging.xcconfig */,
 				6F3A0971EAE0313505AD6369 /* Pods-RNAdvanceArcht-tvOS.staging.xcconfig */,
 				6EA6AEF1564DABFDE9BCBD90 /* Pods-RNAdvanceArcht-tvOSTests.staging.xcconfig */,
+				79ECB71BAD2DE85F344F07F1 /* Pods-RNAdvanceArcht.debug.xcconfig */,
+				29C69A8BA2390AB2320F75D7 /* Pods-RNAdvanceArcht.staging.xcconfig */,
+				2854F571923BBD96CFB3C26D /* Pods-RNAdvanceArcht.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -332,6 +374,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -420,7 +463,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -726,7 +769,11 @@
 				);
 				INFOPLIST_FILE = RNAdvanceArchtTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -746,7 +793,11 @@
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = RNAdvanceArchtTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -760,14 +811,17 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31899878A617E9DD67F49F96 /* Pods-RNAdvanceArcht.debug.xcconfig */;
+			baseConfigurationReference = 79ECB71BAD2DE85F344F07F1 /* Pods-RNAdvanceArcht.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNAdvanceArcht/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -783,13 +837,16 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A102DE834A99EB054C89F20 /* Pods-RNAdvanceArcht.release.xcconfig */;
+			baseConfigurationReference = 2854F571923BBD96CFB3C26D /* Pods-RNAdvanceArcht.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = RNAdvanceArcht/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -816,7 +873,10 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNAdvanceArcht-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -844,7 +904,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNAdvanceArcht-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -871,7 +934,11 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNAdvanceArcht-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -898,7 +965,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNAdvanceArcht-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -961,7 +1032,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -1016,7 +1090,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -1077,7 +1154,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
@@ -1091,7 +1171,7 @@
 		};
 		B07DD19C256C090B0047EF8D /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62938150AA7AB0FF4F61555F /* Pods-RNAdvanceArcht.staging.xcconfig */;
+			baseConfigurationReference = 29C69A8BA2390AB2320F75D7 /* Pods-RNAdvanceArcht.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1101,7 +1181,10 @@
 				DEVELOPMENT_TEAM = 7Z2M44K833;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNAdvanceArcht/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1127,7 +1210,11 @@
 				);
 				INFOPLIST_FILE = RNAdvanceArchtTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1153,7 +1240,10 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNAdvanceArcht-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1180,7 +1270,11 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNAdvanceArcht-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

@@ -5,25 +5,21 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-
     "set:env:debug": "node ./scripts/set-env.js --env debug",
     "set:env:staging": "node ./scripts/set-env.js --env staging",
     "set:env:release": "node ./scripts/set-env.js --env release",
-
     "run:android:debug": "yarn set:env:debug && yarn android --variant debug",
     "run:android:staging": "yarn set:env:staging && yarn android --variant staging",
     "run:android:release": "yarn set:env:release && yarn android --variant release",
-
     "run:ios:debug": "yarn set:env:debug && yarn ios --configuration Debug",
     "run:ios:staging": "yarn set:env:staging && yarn ios --configuration Staging",
     "run:ios:release": "yarn set:env:release && yarn ios --configuration Release",
-
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
     "update:pods": "cd ios && pod install --repo-update && cd ..",
     "postinstall": "yarn run update:pods",
-    "mock": "json-server --watch ./app/api/mock/db.json --middlewares ./app/api/mock/headers.js"
+    "mock": "json-server --watch ./app/api/mock/db.json --middlewares ./app/api/mock/headers.js --routes ./app/api/mock/routes.json"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.10.0",
