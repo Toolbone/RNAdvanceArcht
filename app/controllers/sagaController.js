@@ -3,12 +3,13 @@
 //This acts as our centralise error handling mechanism which enables easily migrate our error handling to a centralise SDK.
 
 import { all, put, fork } from 'redux-saga/effects';
-import * as loginActions from '../screens/login/redux/actions';
+import * as loginActions from '../screens/Login/redux/actions';
 import * as rootActions from '../system/actions';
 import { updateAuthHeader } from '../api/RemoteData';
 import { Alert } from 'react-native';
 import * as ActionTypes from '../system/types';
-import * as productActions from '../screens/home/redux/actions';
+import * as productListActions from '../screens/Home/redux/actions';
+import * as productDetailsActions from '../screens/ProductDetails/redux/actions';
 import * as types from '../system/types';
 
 const StatusCode = Object.freeze({
@@ -33,7 +34,7 @@ export function* controlledStates(
   showLogs = true,
 ) {
   statusCode = code;
-  showLogs && displayLogs(response, responseType);
+  response && showLogs && displayLogs(response, responseType);
 
   switch (responseType) {
     case types.LOGIN_REQUEST:
@@ -41,7 +42,9 @@ export function* controlledStates(
     case types.LOGOUT_REQUEST:
       return yield onLogoutRequest();
     case types.PRODUCT_LIST_REQUEST:
-      return yield onProductRequest(response);
+      return yield onProductListRequest(response);
+    case types.PRODUCT_DETAILS_REQUEST:
+      return yield onProductDetailsRequest(response);
     default:
       return;
   }
@@ -68,6 +71,7 @@ function* onLoginRequest(response) {
   let isLoggedIn = false;
   switch (statusCode) {
     case StatusCode.SUCCESS:
+    case StatusCode.CREATED:
       message = 'Personalizing...';
       isLoggedIn = true;
       break;
@@ -79,19 +83,27 @@ function* onLoginRequest(response) {
       break;
   }
   return yield all([
-    fork(updateAuthHeader, response.data?.data?.jwt),
-
+    put(productListActions.requestProductList(20)),
+    isLoggedIn && fork(updateAuthHeader, response.data?.data?.jwt),
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
     put(rootActions.hideLoader()),
-
-    put(productActions.requestProductList(20)),
   ]);
-}
-
-function* onProductRequest(response) {
-  return yield all([put(productActions.onProductListResponse(response.data))]);
 }
 
 function* onLogoutRequest() {
   return yield all([put(loginActions.onLogoutResponse())]);
+}
+
+function* onProductListRequest(response) {
+  console.log(JSON.stringify(response?.data));
+  return yield all([
+    put(productListActions.onProductListResponse(response?.data)),
+  ]);
+}
+
+function* onProductDetailsRequest(response) {
+  console.log('--->' + JSON.stringify(response));
+  return yield all([
+    put(productDetailsActions.onProductDetailsResponse(response?.data)),
+  ]);
 }

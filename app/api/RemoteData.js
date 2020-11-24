@@ -1,26 +1,27 @@
 // General api to access data
-import ApiConstants from './ApiConstants';
 import Axios, { AxiosResponse } from 'axios';
 
 import OAuth from 'oauth-1.0a';
 import CryptoJS from 'crypto-js';
-import { join } from 'ramda';
+import * as Config from './env';
 
 const client = Axios.create({
-  baseURL: ApiConstants.BASE_URL_SECURE,
+  baseURL: Config.env.BASE_URL_SECURE,
   timeout: 60000,
   headers: {
     'Cache-Control': 'no-cache',
     'User-Agent': 'RNAdvanceArcht--v1.0.0',
     'X-App-Version': 'v1.0.0',
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
   },
 });
 
 const _getOAuth = (): OAuth => {
   let data = {
     consumer: {
-      key: ApiConstants.KEY,
-      secret: ApiConstants.SECRET,
+      key: Config.env.KEY,
+      secret: Config.env.SECRET,
     },
     signature_method: 'HMAC-SHA256',
     hash_function: (base_string, key) => {
@@ -37,8 +38,8 @@ const _getOAuth = (): OAuth => {
 
 const get = async (path: string, params?: any): Promise<AxiosResponse> => {
   const config = {
-    url: `${ApiConstants.BASE_URL_SECURE}${path}`,
-    baseURL: ApiConstants.BASE_URL_SECURE,
+    url: `${Config.env.BASE_URL_SECURE}${path}`,
+    baseURL: Config.env.BASE_URL_SECURE,
     method: 'GET',
     params: params,
   };
@@ -46,12 +47,17 @@ const get = async (path: string, params?: any): Promise<AxiosResponse> => {
   return client.request(config);
 };
 
-const post = async (path: string, params?: any): Promise<AxiosResponse> => {
+const post = async (
+  path: string,
+  params?: any,
+  data?: any,
+): Promise<AxiosResponse> => {
   const config = {
-    url: `${ApiConstants.BASE_URL_SECURE}${path}`,
-    baseURL: ApiConstants.BASE_URL_SECURE,
+    url: `${Config.env.BASE_URL_SECURE}${path}`,
+    baseURL: Config.env.BASE_URL_SECURE,
     method: 'POST',
     params: params,
+    data: data,
   };
   return client.request(config);
 };

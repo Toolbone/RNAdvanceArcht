@@ -6,23 +6,36 @@ import DeviceInfo from 'react-native-device-info';
 
 import { navigationRef } from './NavigationService';
 import Tabs from 'app/containers/Tabs';
-import Login from 'app/screens/login';
+import Login from 'app/screens/Login';
 
 import { StyleSheet, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Loader from '../components/Loader';
-import * as loginActions from '../screens/login/redux/actions';
+import * as loginActions from '../screens/Login/redux/actions';
+import ProductDetails from 'app/screens/ProductDetails';
 
 const Stack = createStackNavigator();
 
 const homeOptions = {
-  title: 'My home',
+  title: 'Home',
   headerStyle: {
     backgroundColor: '#f4511e',
   },
   headerTintColor: '#fff',
   headerTitleStyle: {
     fontWeight: 'bold',
+  },
+};
+
+const transitionSpec = {
+  animation: 'spring',
+  config: {
+    stiffness: 1000,
+    damping: 500,
+    mass: 10,
+    overshootClamping: true,
+    restDisplacementThreshold: 0.01,
+    restSpeedThreshold: 0.01,
   },
 };
 
@@ -86,6 +99,19 @@ export default function App() {
             }}
           />
         )}
+        <Stack.Screen
+          name="ProductDetails"
+          component={ProductDetails}
+          options={{
+            title: '',
+            headerShown: true,
+            headerBackTitleVisible: false,
+            transitionSpec: {
+              open: transitionSpec,
+              close: transitionSpec,
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
