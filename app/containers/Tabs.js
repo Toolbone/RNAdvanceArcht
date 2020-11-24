@@ -9,10 +9,10 @@ import { Portal, FAB, Text } from 'react-native-paper';
 import DeviceInfo from 'react-native-device-info';
 
 import TabBar from 'app/containers/TabBar';
-import Setting from '../screens/setting';
-import About from '../screens/about';
-import Profile from '../screens/profile';
-import Home from '../screens/home';
+import Setting from '../screens/Setting';
+import About from '../screens/About';
+import Profile from '../screens/Profile';
+import Home from '../screens/Home';
 const Tab = createMaterialBottomTabNavigator();
 
 function Tabs() {

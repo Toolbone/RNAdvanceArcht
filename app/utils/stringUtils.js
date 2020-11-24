@@ -10,3 +10,8 @@ export const getInitials = (name) => {
 export const currencyFormat = (num) => {
   return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 };
+
+export const removeHtmlTag = (str) => {
+  const regex = /(<([^>]+)>)/gi;
+  return str.replace(regex, '');
+};
