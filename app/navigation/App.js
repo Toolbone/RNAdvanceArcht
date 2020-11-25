@@ -32,7 +32,7 @@ const transitionSpec = {
   config: {
     stiffness: 1000,
     damping: 500,
-    mass: 10,
+    mass: 5,
     overshootClamping: true,
     restDisplacementThreshold: 0.01,
     restSpeedThreshold: 0.01,
@@ -45,7 +45,7 @@ export default function App() {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.loginReducer.token);
   const onLogout = () => dispatch(loginActions.requestLogout(token));
-  let isLoading = useSelector((state) => state.rootReducer.isLoading);
+  const isLoading = useSelector((state) => state.rootReducer.isLoading);
 
   return (
     <NavigationContainer ref={navigationRef}>

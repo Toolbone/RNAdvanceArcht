@@ -13,11 +13,16 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
+import { isEmpty } from 'ramda';
 
 export default function ProductDetails() {
   const product = useSelector((state) => state.productDetailsReducer.product);
 
-  return (
+  return product === undefined || isEmpty(product) ? (
+    <View style={styles.center}>
+      <Text> No Item Found </Text>
+    </View>
+  ) : (
     <View style={styles.container}>
       <ScrollView>
         <View style={{ alignItems: 'center', marginHorizontal: 30 }}>
@@ -35,28 +40,7 @@ export default function ProductDetails() {
             {product?.slug + ' - ' + removeHtmlTag(product?.description)}
           </Text>
         </View>
-        <View style={styles.starContainer}>
-          <Image
-            style={styles.star}
-            source={{ uri: 'https://img.icons8.com/color/40/000000/star.png' }}
-          />
-          <Image
-            style={styles.star}
-            source={{ uri: 'https://img.icons8.com/color/40/000000/star.png' }}
-          />
-          <Image
-            style={styles.star}
-            source={{ uri: 'https://img.icons8.com/color/40/000000/star.png' }}
-          />
-          <Image
-            style={styles.star}
-            source={{ uri: 'https://img.icons8.com/color/40/000000/star.png' }}
-          />
-          <Image
-            style={styles.star}
-            source={{ uri: 'https://img.icons8.com/color/40/000000/star.png' }}
-          />
-        </View>
+        <View style={styles.starContainer} />
         <View style={styles.contentColors}>
           <TouchableOpacity
             style={[styles.btnColor, { backgroundColor: '#00BFFF' }]}
@@ -93,9 +77,7 @@ export default function ProductDetails() {
         </View>
         <View style={styles.separator} />
         <View style={styles.addToCarContainer}>
-          <TouchableOpacity
-            style={styles.shareButton}
-            onPress={() => this.clickEventListener()}>
+          <TouchableOpacity style={styles.shareButton} onPress={() => {}}>
             <Text style={styles.shareButtonText}>Add To Cart</Text>
           </TouchableOpacity>
         </View>

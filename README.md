@@ -88,7 +88,9 @@ When you face issue with node_module try this steps into your terminal
 1. rm -rf node_modules 
 2. npm install
 
-
+If there is an issue with Base 64 and utf8 try
+* npm install buffer
+ 
 Unable to resolve module \<module> from `node_modules/ ****`: \<module> could not be found within the project.
 
 If you are sure the module exists, try these steps:

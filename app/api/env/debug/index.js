@@ -1,7 +1,7 @@
 export const env = {
   // Here you can put all your Debug environment variables accessible from Javascript.
   name: 'DEBUG',
- // BASE_URL: 'http://localhost:3000',
+  //BASE_URL: 'http://localhost:3000',
   //BASE_URL_SECURE: 'http://localhost:3000',
 
   BASE_URL: 'http://www.toolbone.com/loginme',

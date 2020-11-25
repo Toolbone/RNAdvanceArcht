@@ -24,8 +24,6 @@ export function logoutUser(token) {
 export function fetchProductList(perPage) {
   return RemoteData.get(ApiConstants.PRODUCT_LIST, {
     per_page: perPage,
-    consumer_key: Config.env.KEY,
-    consumer_secret: Config.env.SECRET,
   })
     .then((response) => ({ response }))
     .then((json) => json)
@@ -33,10 +31,7 @@ export function fetchProductList(perPage) {
 }
 
 export function fetchProductDetail(id) {
-  return RemoteData.get(ApiConstants.PRODUCT_DETAIL + '/' + id, {
-    consumer_key: Config.env.KEY,
-    consumer_secret: Config.env.SECRET,
-  })
+  return RemoteData.get(ApiConstants.PRODUCT_DETAIL + '/' + id)
     .then((response) => ({ response }))
     .then((json) => json)
     .catch((error) => ({ error }));

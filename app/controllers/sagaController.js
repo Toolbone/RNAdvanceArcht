@@ -83,8 +83,9 @@ function* onLoginRequest(response) {
       break;
   }
   return yield all([
+    //isLoggedIn && fork(updateAuthHeader, response.data?.data?.jwt),
     put(productListActions.requestProductList(20)),
-    isLoggedIn && fork(updateAuthHeader, response.data?.data?.jwt),
+
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
     put(rootActions.hideLoader()),
   ]);
@@ -95,15 +96,17 @@ function* onLogoutRequest() {
 }
 
 function* onProductListRequest(response) {
-  console.log(JSON.stringify(response?.data));
+  console.log(JSON.stringify(response));
   return yield all([
     put(productListActions.onProductListResponse(response?.data)),
   ]);
 }
 
 function* onProductDetailsRequest(response) {
-  console.log('--->' + JSON.stringify(response));
+  //console.log('--->' + JSON.stringify(response));
+
   return yield all([
+    put(rootActions.hideLoader()),
     put(productDetailsActions.onProductDetailsResponse(response?.data)),
   ]);
 }

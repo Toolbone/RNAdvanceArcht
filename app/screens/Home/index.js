@@ -7,21 +7,23 @@ import { useSelector } from 'react-redux';
 import styles from './styles';
 import { currencyFormat } from '../../utils/stringUtils';
 import * as loginActions from '../Login/redux/actions';
+
 import { useDispatch } from 'react-redux';
+import * as rootActions from '../../system/actions';
 import * as productDetailsActions from '../ProductDetails/redux/actions';
+import { isEmpty } from 'ramda';
 
 export default function Home() {
   const dispatch = useDispatch();
   const navigation = useNavigation();
-  const [productId, setProductId] = useState();
 
   const products = useSelector((state) => state.productListReducer.products);
-  const loginRequest = useCallback(
-    () => dispatch(productDetailsActions.requestProductDetails(productId)),
-    [dispatch, productId],
-  );
 
-  return (
+  return products === undefined || isEmpty(products) ? (
+    <View style={styles.container}>
+      <Text> Loading Items... </Text>
+    </View>
+  ) : (
     <ScrollView contentContainerStyle={styles.content}>
       {products.map((product, index) => {
         const price = currencyFormat(parseInt(product?.price, 10));
@@ -31,10 +33,11 @@ export default function Home() {
               style={styles.photo}
               onStartShouldSetResponder={() => true}
               onResponderRelease={() => {
-                navigation.navigate('ProductDetails');
+                dispatch(rootActions.showLoader());
                 dispatch(
                   productDetailsActions.requestProductDetails(product?.id),
                 );
+                navigation.navigate('ProductDetails');
               }}>
               <Image
                 style={styles.photo}

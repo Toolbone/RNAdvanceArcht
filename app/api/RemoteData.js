@@ -1,9 +1,13 @@
 // General api to access data
 import Axios, { AxiosResponse } from 'axios';
-
-import OAuth from 'oauth-1.0a';
-import CryptoJS from 'crypto-js';
 import * as Config from './env';
+import { Buffer } from 'buffer';
+global.Buffer = Buffer;
+
+const encodedToken = Buffer.from(
+  `${Config.env.KEY}:${Config.env.SECRET}`,
+  'utf8',
+).toString('base64');
 
 const client = Axios.create({
   baseURL: Config.env.BASE_URL_SECURE,
@@ -14,27 +18,9 @@ const client = Axios.create({
     'X-App-Version': 'v1.0.0',
     'Content-Type': 'application/json',
     Accept: 'application/json',
+    Authorization: `Basic ${encodedToken}`,
   },
 });
-
-const _getOAuth = (): OAuth => {
-  let data = {
-    consumer: {
-      key: Config.env.KEY,
-      secret: Config.env.SECRET,
-    },
-    signature_method: 'HMAC-SHA256',
-    hash_function: (base_string, key) => {
-      return CryptoJS.HmacSHA256(base_string, key).toString(
-        CryptoJS.enc.Base64,
-      );
-    },
-  };
-  /*if (-1 < ['v1', 'v2'].indexOf(this.version)) {
-    data.last_ampersand = false;
-  }*/
-  return new OAuth(data);
-};
 
 const get = async (path: string, params?: any): Promise<AxiosResponse> => {
   const config = {
