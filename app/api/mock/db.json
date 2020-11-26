@@ -23,7 +23,7 @@
   },
   "products": [
     {
-      "id": 84,
+      "id": 1,
       "name": "Vneck Tshirt",
       "slug": "vneck-tee",
       "permalink": "http://www.toolbone.com/loginme/product/vneck-tee/",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "id": 80,
+      "id": 2,
       "name": "Hoodie",
       "slug": "hoodie",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie/",
@@ -243,7 +243,7 @@
       }
     },
     {
-      "id": 79,
+      "id": 3,
       "name": "Hoodie with Zipper",
       "slug": "hoodie-with-zipper",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-zipper/",
@@ -353,7 +353,7 @@
       }
     },
     {
-      "id": 78,
+      "id": 4,
       "name": "Hoodie with Pocket",
       "slug": "hoodie-with-pocket",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-pocket/",
@@ -463,7 +463,7 @@
       }
     },
     {
-      "id": 77,
+      "id": 5,
       "name": "Hoodie with Logo",
       "slug": "hoodie-with-logo",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-logo/",
@@ -573,7 +573,7 @@
       }
     },
     {
-      "id": 76,
+      "id": 6,
       "name": "Sunglasses",
       "slug": "sunglasses",
       "permalink": "http://www.toolbone.com/loginme/product/sunglasses/",
@@ -683,7 +683,7 @@
       }
     },
     {
-      "id": 75,
+      "id": 7,
       "name": "Cap",
       "slug": "cap",
       "permalink": "http://www.toolbone.com/loginme/product/cap/",
@@ -793,7 +793,7 @@
       }
     },
     {
-      "id": 80,
+      "id": 8,
       "name": "Hoodie",
       "slug": "hoodie",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie/",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "id": 79,
+      "id": 9,
       "name": "Hoodie with Zipper",
       "slug": "hoodie-with-zipper",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-zipper/",
@@ -1013,7 +1013,7 @@
       }
     },
     {
-      "id": 78,
+      "id": 10,
       "name": "Hoodie with Pocket",
       "slug": "hoodie-with-pocket",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-pocket/",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "id": 77,
+      "id": 11,
       "name": "Hoodie with Logo",
       "slug": "hoodie-with-logo",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-logo/",
@@ -1233,7 +1233,7 @@
       }
     },
     {
-      "id": 76,
+      "id": 12,
       "name": "Sunglasses",
       "slug": "sunglasses",
       "permalink": "http://www.toolbone.com/loginme/product/sunglasses/",
@@ -1343,7 +1343,7 @@
       }
     },
     {
-      "id": 75,
+      "id": 13,
       "name": "Cap",
       "slug": "cap",
       "permalink": "http://www.toolbone.com/loginme/product/cap/",
@@ -1453,7 +1453,7 @@
       }
     },
     {
-      "id": 83,
+      "id": 14,
       "name": "Tshirt",
       "slug": "tshirt",
       "permalink": "http://www.toolbone.com/loginme/product/tshirt/",
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "id": 82,
+      "id": 15,
       "name": "Polo",
       "slug": "polo",
       "permalink": "http://www.toolbone.com/loginme/product/polo/",
@@ -1673,7 +1673,7 @@
       }
     },
     {
-      "id": 81,
+      "id": 16,
       "name": "Long Sleeve Tee",
       "slug": "long-sleeve-tee",
       "permalink": "http://www.toolbone.com/loginme/product/long-sleeve-tee/",
@@ -1783,7 +1783,7 @@
       }
     },
     {
-      "id": 80,
+      "id": 17,
       "name": "Hoodie",
       "slug": "hoodie",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie/",
@@ -1893,7 +1893,7 @@
       }
     },
     {
-      "id": 79,
+      "id": 18,
       "name": "Hoodie with Zipper",
       "slug": "hoodie-with-zipper",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-zipper/",
@@ -2003,7 +2003,7 @@
       }
     },
     {
-      "id": 78,
+      "id": 19,
       "name": "Hoodie with Pocket",
       "slug": "hoodie-with-pocket",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-pocket/",
@@ -2113,7 +2113,7 @@
       }
     },
     {
-      "id": 77,
+      "id": 20,
       "name": "Hoodie with Logo",
       "slug": "hoodie-with-logo",
       "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-logo/",
@@ -2223,7 +2223,7 @@
       }
     },
     {
-      "id": 76,
+      "id": 21,
       "name": "Sunglasses",
       "slug": "sunglasses",
       "permalink": "http://www.toolbone.com/loginme/product/sunglasses/",
@@ -2333,7 +2333,1437 @@
       }
     },
     {
-      "id": 75,
+      "id": 22,
+      "name": "Cap",
+      "slug": "cap",
+      "permalink": "http://www.toolbone.com/loginme/product/cap/",
+      "date_created": "2020-09-05T15:30:03",
+      "date_created_gmt": "2020-09-05T15:30:03",
+      "date_modified": "2020-09-05T15:30:03",
+      "date_modified_gmt": "2020-09-05T15:30:03",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "16",
+      "regular_price": "18",
+      "sale_price": "16",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<del><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>18.00</bdi></span></del> <ins><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>16.00</bdi></span></ins>",
+      "on_sale": true,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        73,
+        74,
+        76
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 19,
+          "name": "Accessories",
+          "slug": "accessories"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 57,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/cap-1.jpg",
+          "name": "Cap",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 560,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/75"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "name": "Hoodie with Pocket",
+      "slug": "hoodie-with-pocket",
+      "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-pocket/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": true,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "35",
+      "regular_price": "45",
+      "sale_price": "35",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<del><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>45.00</bdi></span></del> <ins><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>35.00</bdi></span></ins>",
+      "on_sale": true,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        80,
+        79,
+        77
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 18,
+          "name": "Hoodies",
+          "slug": "hoodies"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 59,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/hoodie-with-pocket-1.jpg",
+          "name": "Hoodie with Pocket",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 569,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/78"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name": "Hoodie with Logo",
+      "slug": "hoodie-with-logo",
+      "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-logo/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "45",
+      "regular_price": "45",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>45.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        79,
+        78,
+        80
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 18,
+          "name": "Hoodies",
+          "slug": "hoodies"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 58,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/hoodie-with-logo-1.jpg",
+          "name": "Hoodie with Logo",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 566,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/77"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name": "Sunglasses",
+      "slug": "sunglasses",
+      "permalink": "http://www.toolbone.com/loginme/product/sunglasses/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": true,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "90",
+      "regular_price": "90",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>90.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        74,
+        75,
+        73
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 19,
+          "name": "Accessories",
+          "slug": "accessories"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 64,
+          "date_created": "2020-09-05T15:30:03",
+          "date_created_gmt": "2020-09-05T15:30:03",
+          "date_modified": "2020-09-05T15:30:03",
+          "date_modified_gmt": "2020-09-05T15:30:03",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/sunglasses-1.jpg",
+          "name": "Sunglasses",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 563,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/76"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "name": "Cap",
+      "slug": "cap",
+      "permalink": "http://www.toolbone.com/loginme/product/cap/",
+      "date_created": "2020-09-05T15:30:03",
+      "date_created_gmt": "2020-09-05T15:30:03",
+      "date_modified": "2020-09-05T15:30:03",
+      "date_modified_gmt": "2020-09-05T15:30:03",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "16",
+      "regular_price": "18",
+      "sale_price": "16",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<del><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>18.00</bdi></span></del> <ins><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>16.00</bdi></span></ins>",
+      "on_sale": true,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        73,
+        74,
+        76
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 19,
+          "name": "Accessories",
+          "slug": "accessories"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 57,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/cap-1.jpg",
+          "name": "Cap",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 560,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/75"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "name": "Tshirt",
+      "slug": "tshirt",
+      "permalink": "http://www.toolbone.com/loginme/product/tshirt/",
+      "date_created": "2020-09-05T15:30:06",
+      "date_created_gmt": "2020-09-05T15:30:06",
+      "date_modified": "2020-09-05T15:30:06",
+      "date_modified_gmt": "2020-09-05T15:30:06",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "18",
+      "regular_price": "18",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>18.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        81,
+        82,
+        84
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 17,
+          "name": "Tshirts",
+          "slug": "tshirts"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 65,
+          "date_created": "2020-09-05T15:30:03",
+          "date_created_gmt": "2020-09-05T15:30:03",
+          "date_modified": "2020-09-05T15:30:03",
+          "date_modified_gmt": "2020-09-05T15:30:03",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/tshirt-1.jpg",
+          "name": "Tshirt",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 584,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/83"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "name": "Polo",
+      "slug": "polo",
+      "permalink": "http://www.toolbone.com/loginme/product/polo/",
+      "date_created": "2020-09-05T15:30:05",
+      "date_created_gmt": "2020-09-05T15:30:05",
+      "date_modified": "2020-09-05T15:30:05",
+      "date_modified_gmt": "2020-09-05T15:30:05",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "20",
+      "regular_price": "20",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>20.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        81,
+        83,
+        84
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 17,
+          "name": "Tshirts",
+          "slug": "tshirts"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 63,
+          "date_created": "2020-09-05T15:30:03",
+          "date_created_gmt": "2020-09-05T15:30:03",
+          "date_modified": "2020-09-05T15:30:03",
+          "date_modified_gmt": "2020-09-05T15:30:03",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/polo-1.jpg",
+          "name": "Polo",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 581,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/82"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "name": "Long Sleeve Tee",
+      "slug": "long-sleeve-tee",
+      "permalink": "http://www.toolbone.com/loginme/product/long-sleeve-tee/",
+      "date_created": "2020-09-05T15:30:05",
+      "date_created_gmt": "2020-09-05T15:30:05",
+      "date_modified": "2020-09-05T15:30:05",
+      "date_modified_gmt": "2020-09-05T15:30:05",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "25",
+      "regular_price": "25",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>25.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        83,
+        84,
+        82
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 17,
+          "name": "Tshirts",
+          "slug": "tshirts"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 62,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/long-sleeve-tee-1.jpg",
+          "name": "Long Sleeve Tee",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 578,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/81"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name": "Hoodie",
+      "slug": "hoodie",
+      "permalink": "http://www.toolbone.com/loginme/product/hoodie/",
+      "date_created": "2020-09-05T15:30:05",
+      "date_created_gmt": "2020-09-05T15:30:05",
+      "date_modified": "2020-09-05T15:30:05",
+      "date_modified_gmt": "2020-09-05T15:30:05",
+      "type": "simple",
+      "status": "publish",
+      "featured": true,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "42",
+      "regular_price": "45",
+      "sale_price": "42",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<del><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>45.00</bdi></span></del> <ins><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>42.00</bdi></span></ins>",
+      "on_sale": true,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        77,
+        78,
+        79
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 18,
+          "name": "Hoodies",
+          "slug": "hoodies"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 61,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/hoodie-1.jpg",
+          "name": "Hoodie",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 575,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/80"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "name": "Hoodie with Zipper",
+      "slug": "hoodie-with-zipper",
+      "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-zipper/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": true,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "45",
+      "regular_price": "45",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>45.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        80,
+        77,
+        78
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 18,
+          "name": "Hoodies",
+          "slug": "hoodies"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 60,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/hoodie-with-zipper-1.jpg",
+          "name": "Hoodie with Zipper",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 572,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/79"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "name": "Hoodie with Pocket",
+      "slug": "hoodie-with-pocket",
+      "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-pocket/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": true,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "35",
+      "regular_price": "45",
+      "sale_price": "35",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<del><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>45.00</bdi></span></del> <ins><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>35.00</bdi></span></ins>",
+      "on_sale": true,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        80,
+        79,
+        77
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 18,
+          "name": "Hoodies",
+          "slug": "hoodies"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 59,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/hoodie-with-pocket-1.jpg",
+          "name": "Hoodie with Pocket",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 569,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/78"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "name": "Hoodie with Logo",
+      "slug": "hoodie-with-logo",
+      "permalink": "http://www.toolbone.com/loginme/product/hoodie-with-logo/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": false,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "45",
+      "regular_price": "45",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>45.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        79,
+        78,
+        80
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 18,
+          "name": "Hoodies",
+          "slug": "hoodies"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 58,
+          "date_created": "2020-09-05T15:30:02",
+          "date_created_gmt": "2020-09-05T15:30:02",
+          "date_modified": "2020-09-05T15:30:02",
+          "date_modified_gmt": "2020-09-05T15:30:02",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/hoodie-with-logo-1.jpg",
+          "name": "Hoodie with Logo",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 566,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/77"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "name": "Sunglasses",
+      "slug": "sunglasses",
+      "permalink": "http://www.toolbone.com/loginme/product/sunglasses/",
+      "date_created": "2020-09-05T15:30:04",
+      "date_created_gmt": "2020-09-05T15:30:04",
+      "date_modified": "2020-09-05T15:30:04",
+      "date_modified_gmt": "2020-09-05T15:30:04",
+      "type": "simple",
+      "status": "publish",
+      "featured": true,
+      "catalog_visibility": "visible",
+      "description": "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>\n",
+      "short_description": "",
+      "sku": "",
+      "price": "90",
+      "regular_price": "90",
+      "sale_price": "",
+      "date_on_sale_from": null,
+      "date_on_sale_from_gmt": null,
+      "date_on_sale_to": null,
+      "date_on_sale_to_gmt": null,
+      "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\">&#36;</span>90.00</bdi></span>",
+      "on_sale": false,
+      "purchasable": true,
+      "total_sales": 0,
+      "virtual": false,
+      "downloadable": false,
+      "downloads": [],
+      "download_limit": -1,
+      "download_expiry": -1,
+      "external_url": "",
+      "button_text": "",
+      "tax_status": "taxable",
+      "tax_class": "",
+      "manage_stock": false,
+      "stock_quantity": null,
+      "stock_status": "instock",
+      "backorders": "no",
+      "backorders_allowed": false,
+      "backordered": false,
+      "sold_individually": false,
+      "weight": "",
+      "dimensions": {
+        "length": "",
+        "width": "",
+        "height": ""
+      },
+      "shipping_required": true,
+      "shipping_taxable": true,
+      "shipping_class": "",
+      "shipping_class_id": 0,
+      "reviews_allowed": true,
+      "average_rating": "0.00",
+      "rating_count": 0,
+      "related_ids": [
+        74,
+        75,
+        73
+      ],
+      "upsell_ids": [],
+      "cross_sell_ids": [],
+      "parent_id": 0,
+      "purchase_note": "",
+      "categories": [
+        {
+          "id": 19,
+          "name": "Accessories",
+          "slug": "accessories"
+        }
+      ],
+      "tags": [],
+      "images": [
+        {
+          "id": 64,
+          "date_created": "2020-09-05T15:30:03",
+          "date_created_gmt": "2020-09-05T15:30:03",
+          "date_modified": "2020-09-05T15:30:03",
+          "date_modified_gmt": "2020-09-05T15:30:03",
+          "src": "http://www.toolbone.com/loginme/wp-content/uploads/2020/09/sunglasses-1.jpg",
+          "name": "Sunglasses",
+          "alt": ""
+        }
+      ],
+      "attributes": [],
+      "default_attributes": [],
+      "variations": [],
+      "grouped_products": [],
+      "menu_order": 0,
+      "meta_data": [
+        {
+          "id": 563,
+          "key": "_customize_changeset_uuid",
+          "value": "a29d20d1-0fa3-43ef-8b35-d60acd33d4c1"
+        }
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products/76"
+          }
+        ],
+        "collection": [
+          {
+            "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
       "name": "Cap",
       "slug": "cap",
       "permalink": "http://www.toolbone.com/loginme/product/cap/",

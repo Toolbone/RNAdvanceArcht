@@ -1,8 +1,8 @@
 {
-  "/api/v1/auth/token": "/mobileAuthToken",
-  "/api/v1/oauth/token/network?grant_type=password&username=:username": "/loginNetwork",
-
   "/wp-json/aam/v2/authenticate": "/authenticate",
   "/wp-json/aam/v2/jwt/revoke": "/revoke",
-  "/wp-json/wc/v3/products?per_page=20&consumer_key=ck_a10c86e6562e59a8d934213b4476fa6e478da8e3&consumer_secret=cs_801a3b83422cbba8d5d4feaa6811fd8fde5a1ade": "/products"
+  "/wp-json/wc/v3/products\\?per_page=:per_page/": "/products?_start=0&_end=:per_page",
+  "/wp-json/wc/v3/products": "/products?_start=0&_end=10",
+
+  "/wp-json/wc/v3/products/:id": "/products/:id"
 }
