@@ -70,9 +70,9 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
 4. Use [React Native Rename](https://github.com/junedomingo/react-native-rename) to update project name `$ npx react-native-rename <newName>`
 5. Run `yarn` or `npm install` to install dependencies
 
-6) Start the packager with `npm start`
-7) Connect a mobile device to your development machine
-8) Run the test application:
+6. Start the packager with `npm start`
+7. Connect a mobile device to your development machine
+8. Run the test application:
 
 - On Android:
   - Run `react-native run-android`
@@ -81,6 +81,14 @@ This project also serves as a template for Wordpress + Woocommerce mobile app, w
   - Hit `Run` after selecting the desired device
 
 9. All set!!!, you are ready to go!
+
+#####Shortcut
+1. Clone this repo, `git clone https://github.com/Toolbone/RNAdvanceArcht.git <your project name>`
+2. Go to project's root directory, `cd <your project name>`
+3. yarn install (remember to have Yarn to do this)
+4. yarn mock
+5. yarn run:ios:debug OR run:android:debug
+6. Then You Should be Set!!!
 
 ## Troubleshooting
 When you face issue with node_module try this steps into your terminal
