@@ -5,9 +5,6 @@
 import { all, put, fork } from 'redux-saga/effects';
 import * as loginActions from '../screens/Login/redux/actions';
 import * as rootActions from '../system/actions';
-import { updateAuthHeader } from '../api/RemoteData';
-import { Alert } from 'react-native';
-import * as ActionTypes from '../system/types';
 import * as productListActions from '../screens/Home/redux/actions';
 import * as productDetailsActions from '../screens/ProductDetails/redux/actions';
 import * as types from '../system/types';
@@ -48,15 +45,6 @@ export function* controlledStates(
     default:
       return;
   }
-  /*actionType = type;
-  if (isEmpty(response?.status) || response === undefined) {
-  } else {
-    if (response?.status !== undefined || !isEmpty(response?.status)) {
-      return yield serverStates(response, type);
-    } else {
-      return yield failStates(response, error);
-    }
-  }*/
 }
 
 function displayLogs(response, type) {
@@ -84,8 +72,7 @@ function* onLoginRequest(response) {
   }
   return yield all([
     //isLoggedIn && fork(updateAuthHeader, response.data?.data?.jwt),
-    put(productListActions.requestProductList(20)),
-
+    isLoggedIn && put(productListActions.requestProductList(20)),
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
     put(rootActions.hideLoader()),
   ]);

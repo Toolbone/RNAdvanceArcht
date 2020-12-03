@@ -1,26 +1,39 @@
 {
-  "authors": [
-    {
-      "id": 1,
-      "name": "Michiel Mulders",
-      "genre": "fiction"
-    }
-  ],
-  "books": [
-    {
-      "id": 1,
-      "title": "some title",
-      "authorId": 1
-    }
-  ],
-  "library": {
-    "name": "City library"
-  },
   "authenticate": {
-    "username": "github",
-    "password": "^ZG78@aRLqT6Cjn1Bx8jEskE",
-    "issueJWT": true
+    "user": {
+      "data": {
+        "ID": 3,
+        "user_login": "github",
+        "user_nicename": "github",
+        "display_name": "Github Microsoft",
+        "user_url": "",
+        "user_email": "ronald@toolbone.com",
+        "user_registered": "2020-09-07 09:12:49"
+      }
+    },
+    "redirect": null,
+    "jwt": {
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDY5MTQ1MjQsImlzcyI6Imh0dHA6XC9cL3d3dy50b29sYm9uZS5jb21cL2xvZ2lubWUiLCJleHAiOjE2MDcwMDA5MjQsImp0aSI6IjQ4NTQ1Y2I0LTMyNDMtNDBkNi1iMWU0LWQ4YWFkMmE1YWFlOCIsInVzZXJJZCI6MywicmV2b2NhYmxlIjp0cnVlLCJyZWZyZXNoYWJsZSI6bnVsbH0.diEMfPow1XvrjpFYNoL3TTmLKlk6kikIE2USQHxceoc",
+      "token_expires": 1607000924
+    }
   },
+  "validUsers": [
+    {
+      "username": "github",
+      "password": "^ZG78@aRLqT6Cjn1Bx8jEskE",
+      "issueJWT": true
+    },
+    {
+      "username": "123",
+      "password": "123",
+      "issueJWT": true
+    }
+  ],
+  "invalidUser": {
+    "code": "invalid_username",
+    "reason": "Unknown username. Check again or try your email address."
+  },
+
   "products": [
     {
       "id": 1,

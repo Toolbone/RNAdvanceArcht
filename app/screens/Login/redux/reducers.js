@@ -9,7 +9,7 @@ import * as types from '../../../system/types';
 const loginInitialState = {
   isLoggedIn: false,
   isRequesting: false,
-  id: 0,
+  id: -1,
   token: '',
   username: '',
   password: '',
@@ -35,6 +35,7 @@ export const loginReducer = createReducer(loginInitialState, {
     return {
       ...state,
       token: action.token,
+      id: action.id,
       statusCode: action.statusCode,
       isRequesting: action.isRequesting,
       isLoggedIn: action.isLoggedIn,

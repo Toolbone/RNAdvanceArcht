@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { Image, ScrollView, View } from 'react-native';
-import { Text } from 'react-native-paper';
+import { Text, Divider, Chip } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
 import { useSelector } from 'react-redux';
@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import * as rootActions from '../../system/actions';
 import * as productDetailsActions from '../ProductDetails/redux/actions';
 import { isEmpty } from 'ramda';
+import * as productListActions from './redux/actions';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -24,36 +25,67 @@ export default function Home() {
       <Text> Loading Items... </Text>
     </View>
   ) : (
-    <ScrollView contentContainerStyle={styles.content}>
-      {products.map((product, index) => {
-        const price = currencyFormat(parseInt(product?.price, 10));
-        return (
-          <View key={product?.id + '' + index} style={styles.item}>
-            <View
-              style={styles.photo}
-              onStartShouldSetResponder={() => true}
-              onResponderRelease={() => {
-                dispatch(rootActions.showLoader());
-                dispatch(
-                  productDetailsActions.requestProductDetails(product?.id),
-                );
-                navigation.navigate('ProductDetails');
-              }}>
-              <Image
+    <View style={styles.container}>
+      <View style={styles.chipsContainer}>
+        <Chip
+          style={styles.chip}
+          icon="stairs"
+          onPress={() => dispatch(productListActions.requestProductList(5))}>
+          5
+        </Chip>
+        <Chip
+          style={styles.chip}
+          icon="stairs"
+          onPress={() => dispatch(productListActions.requestProductList(10))}>
+          10
+        </Chip>
+        <Chip
+          style={styles.chip}
+          icon="stairs"
+          onPress={() => dispatch(productListActions.requestProductList(30))}>
+          30
+        </Chip>
+        <Chip
+          style={styles.chip}
+          icon="sort-alphabetical-variant"
+          onPress={() =>
+            dispatch(productListActions.requestProductList(10, 'slug'))
+          }>
+          10
+        </Chip>
+      </View>
+      <Divider />
+      <ScrollView contentContainerStyle={styles.content}>
+        {products.map((product, index) => {
+          const price = currencyFormat(parseInt(product?.price, 10));
+          return (
+            <View key={product?.id + '' + index} style={styles.item}>
+              <View
                 style={styles.photo}
-                source={{
-                  uri: product?.images[0].src,
-                }}
-              />
-            </View>
+                onStartShouldSetResponder={() => true}
+                onResponderRelease={() => {
+                  dispatch(rootActions.showLoader());
+                  dispatch(
+                    productDetailsActions.requestProductDetails(product?.id),
+                  );
+                  navigation.navigate('ProductDetails');
+                }}>
+                <Image
+                  style={styles.photo}
+                  source={{
+                    uri: product?.images[0].src,
+                  }}
+                />
+              </View>
 
-            <View key={product.id} style={styles.textContainer}>
-              <Text>Name: {product?.name}</Text>
-              <Text style={styles.textPrice}>{price}</Text>
+              <View key={product.id} style={styles.textContainer}>
+                <Text>Name: {product?.name}</Text>
+                <Text style={styles.textPrice}>{price}</Text>
+              </View>
             </View>
-          </View>
-        );
-      })}
-    </ScrollView>
+          );
+        })}
+      </ScrollView>
+    </View>
   );
 }

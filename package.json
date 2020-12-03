@@ -19,7 +19,8 @@
     "lint": "eslint .",
     "update:pods": "cd ios && pod install --repo-update && cd ..",
     "postinstall": "yarn run update:pods",
-    "mock": "json-server --watch ./app/api/mock/db.json --middlewares ./app/api/mock/headers.js --routes ./app/api/mock/routes.json"
+    "mock:simple": "json-server --watch ./app/api/mock/db.json --middlewares app/api/mock/middleware.js --routes ./app/api/mock/routes.json",
+    "mock:advance": "node ./app/api/mock/server.js"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.10.0",
@@ -57,12 +58,13 @@
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
     "babel-jest": "^25.1.0",
+    "connect-pause": "^0.1.0",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
+    "json-server": "^0.16.3",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1",
-    "yargs": "^16.1.1",
-    "json-server": "^0.16.3"
+    "yargs": "^16.1.1"
   },
   "jest": {
     "preset": "react-native"

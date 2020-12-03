@@ -4,13 +4,26 @@ import * as Dimensions from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  chipsContainer: {
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 5,
+    marginTop: 5,
   },
   content: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     padding: 4,
+  },
+  chip: {
+    width: 80,
+    margin: 2,
+    backgroundColor: '#bbbbbb',
   },
   item: {
     height: 300,

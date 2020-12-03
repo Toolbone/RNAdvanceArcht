@@ -9,7 +9,11 @@ export const productListSagas = [
 ];
 
 export function* productListAsync(action) {
-  const { response, error } = yield call(fetchProductList, action.perPage);
+  const { response, error } = yield call(
+    fetchProductList,
+    action.perPage,
+    action.orderBy,
+  );
 
   if (R.isNil(error)) {
     const { status } = response;

@@ -1,6 +1,7 @@
 import RemoteData from 'app/api/RemoteData';
 import ApiConstants from './ApiConstants';
 import * as Config from './env';
+import { isEmpty } from 'ramda';
 
 export function loginUser(username, password) {
   return RemoteData.post(ApiConstants.LOGIN, null, {
@@ -21,10 +22,20 @@ export function logoutUser(token) {
     .catch((error) => ({ error }));
 }
 
-export function fetchProductList(perPage) {
-  return RemoteData.get(ApiConstants.PRODUCT_LIST, {
-    per_page: perPage,
-  })
+export function fetchProductList(perPage, orderBy) {
+  let params = {};
+  if (isEmpty(orderBy) || orderBy === undefined) {
+    params = {
+      per_page: isEmpty(perPage) || perPage === undefined ? 100 : perPage,
+    };
+  } else {
+    params = {
+      per_page: isEmpty(perPage) || perPage === undefined ? 100 : perPage,
+      orderby: orderBy,
+    };
+  }
+
+  return RemoteData.get(ApiConstants.PRODUCT_LIST, params)
     .then((response) => ({ response }))
     .then((json) => json)
     .catch((error) => ({ error }));
@@ -32,6 +43,15 @@ export function fetchProductList(perPage) {
 
 export function fetchProductDetail(id) {
   return RemoteData.get(ApiConstants.PRODUCT_DETAIL + '/' + id)
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => ({ error }));
+}
+
+export function deleteProductOrder(id) {
+  return RemoteData.delete(ApiConstants.PRODUCT_DETAIL + '/' + id, {
+    force: true,
+  })
     .then((response) => ({ response }))
     .then((json) => json)
     .catch((error) => ({ error }));

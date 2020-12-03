@@ -18,7 +18,8 @@ export function requestLogin(username, password) {
 export function onLoginResponse(response, message, isLoggedIn) {
   return {
     type: types.LOGIN_RESPONSE,
-    token: response.data?.data?.jwt,
+    token: response.data?.jwt?.token,
+    id: response.data?.user?.data?.ID,
     message: message,
     username: '',
     password: '',

@@ -4,6 +4,7 @@ const ApiConstants = {
   LOGOUT: '/wp-json/aam/v2/jwt/revoke',
   PRODUCT_LIST: '/wp-json/wc/v3/products',
   PRODUCT_DETAIL: '/wp-json/wc/v3/products',
+  PRODUCT_ORDER: '/wp-json/wc/v3/orders',
 };
 
 export default ApiConstants;

@@ -1,8 +1,8 @@
 {
   "/wp-json/aam/v2/authenticate": "/authenticate",
   "/wp-json/aam/v2/jwt/revoke": "/revoke",
-  "/wp-json/wc/v3/products\\?per_page=:per_page/": "/products?_start=0&_end=:per_page",
-  "/wp-json/wc/v3/products": "/products?_start=0&_end=10",
+  "/wp-json/wc/v3/products\\?per_page=:per_page": "/products?per_page=:per_page",
+  "/wp-json/wc/v3/products": "/products?_start=1&_end=1",
 
   "/wp-json/wc/v3/products/:id": "/products/:id"
 }
