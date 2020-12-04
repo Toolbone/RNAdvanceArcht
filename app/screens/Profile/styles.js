@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginBottom: 10,
   },
+  fieldIcons: {
+    color: '#ff7777',
+  },
   editSave: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -58,9 +61,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
   },
-  input: {
-    width: 200,
-    height: 30,
+  inputField: {
+    width: 300,
+    height: 18,
     marginLeft: 20,
   },
 });

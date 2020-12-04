@@ -9,8 +9,12 @@ const styles = StyleSheet.create({
   login: {
     padding: 8,
     marginBottom: 25,
+    fontSize: 20,
   },
-
+  avatar: {
+    backgroundColor: 'rgba(0,0,0,0.0)',
+    marginBottom: 20,
+  },
   input: {
     width: 200,
     height: 30,

@@ -29,6 +29,13 @@ export function fetchCustomer(id) {
     .catch((error) => ({ error }));
 }
 
+export function updateProfile(id, data) {
+  return RemoteData.put(ApiConstants.CUSTOMER + '/' + id, data)
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => ({ error }));
+}
+
 export function fetchProductList(perPage, orderBy) {
   let params = {};
   if (isEmpty(orderBy) || orderBy === undefined) {

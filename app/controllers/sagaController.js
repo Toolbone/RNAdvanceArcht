@@ -45,6 +45,8 @@ export function* controlledStates(
       return yield onProductListRequest(response);
     case types.PRODUCT_DETAILS_REQUEST:
       return yield onProductDetailsRequest(response);
+    case types.CUSTOMER_DETAILS_UPDATE:
+      return yield onCustomerDetailUpdate(response);
     default:
       return;
   }
@@ -109,5 +111,12 @@ function* onProductDetailsRequest(response) {
   return yield all([
     put(rootActions.hideLoader()),
     put(productDetailsActions.onProductDetailsResponse(response?.data)),
+  ]);
+}
+
+function* onCustomerDetailUpdate(response) {
+  return yield all([
+    put(rootActions.hideLoader()),
+    put(customerDetailsActions.onCustomerDetailsResponse(response?.data)),
   ]);
 }

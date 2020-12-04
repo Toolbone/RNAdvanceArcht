@@ -48,6 +48,16 @@ const post = async (
   return client.request(config);
 };
 
+const put = async (path: string, data?: any): Promise<AxiosResponse> => {
+  const config = {
+    url: `${Config.env.BASE_URL_SECURE}${path}`,
+    baseURL: Config.env.BASE_URL_SECURE,
+    method: 'PUT',
+    data: data,
+  };
+  return client.request(config);
+};
+
 export const updateAuthHeader = (token) => {
   client.defaults.headers.common = {
     Authorization: 'Bearer ' + token,
@@ -58,4 +68,5 @@ export const updateAuthHeader = (token) => {
 export default {
   get,
   post,
+  put,
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Alert, KeyboardAvoidingView } from 'react-native';
-import { Text, Button, TextInput } from 'react-native-paper';
+import { View, Alert, KeyboardAvoidingView, Image } from 'react-native';
+import { Text, Button, TextInput, Avatar } from 'react-native-paper';
 
 import { useDispatch, useSelector } from 'react-redux';
 import * as loginActions from './redux/actions';
@@ -43,6 +43,13 @@ export default function Login() {
   };
   return (
     <View style={styles.container}>
+      <Avatar.Image
+        style={styles.avatar}
+        source={{
+          uri: 'https://filedn.com/lP8Xd69HrqsSjIVRkUvSMDz/ToolBone_icon.png',
+        }}
+        size={120}
+      />
       <Text style={styles.login}>Welcome!</Text>
       <TextInput
         value={username}
@@ -67,7 +74,7 @@ export default function Login() {
         disabled={isRequesting}
         loading={isRequesting}
         style={styles.button}>
-        {`Login`}
+        {'Login'}
       </Button>
 
       <Text style={styles.login}>{message}</Text>

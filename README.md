@@ -124,11 +124,12 @@ Extra tool commands for gitif you want to push your local files to remote files
  * [X] Config a development environments
     * [X] iOS
     * [ ] Android
- * [ ] More Screen Flow
+ * [X] More Screen Flow
      * [X] Product List
      * [X] Product Detail
-     * [ ] Cart and Order List
- * [ ] Use JSON-Server for API mock
+     * [X] Profile Detail With Editable Fields
+     * [ ] Cart and Item List
+ * [X] Use JSON-Server for API mock
  * [ ] Unit Tests   
- * [ ] Clean UI
+ * [X] Clean UI
  
