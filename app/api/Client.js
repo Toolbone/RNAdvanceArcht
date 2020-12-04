@@ -22,6 +22,13 @@ export function logoutUser(token) {
     .catch((error) => ({ error }));
 }
 
+export function fetchCustomer(id) {
+  return RemoteData.get(ApiConstants.CUSTOMER + '/' + id)
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => ({ error }));
+}
+
 export function fetchProductList(perPage, orderBy) {
   let params = {};
   if (isEmpty(orderBy) || orderBy === undefined) {

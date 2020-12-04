@@ -18,8 +18,8 @@ export function requestLogin(username, password) {
 export function onLoginResponse(response, message, isLoggedIn) {
   return {
     type: types.LOGIN_RESPONSE,
-    token: response.data?.jwt?.token,
-    id: response.data?.user?.data?.ID,
+    token: response?.data?.jwt?.token,
+    id: response?.data?.user?.data?.ID,
     message: message,
     username: '',
     password: '',
@@ -28,11 +28,11 @@ export function onLoginResponse(response, message, isLoggedIn) {
   };
 }
 
-export function requestLogout() {
+export function requestLogout(message?) {
   return {
     type: types.LOGOUT_REQUEST,
     token: '',
-    message: '',
+    message: message,
     username: '',
     password: '',
     isRequesting: false,

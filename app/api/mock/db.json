@@ -2,7 +2,7 @@
   "authenticate": {
     "user": {
       "data": {
-        "ID": 3,
+        "ID": 25,
         "user_login": "github",
         "user_nicename": "github",
         "display_name": "Github Microsoft",
@@ -33,7 +33,59 @@
     "code": "invalid_username",
     "reason": "Unknown username. Check again or try your email address."
   },
-
+  "customers": [
+    {
+      "id": 25,
+      "date_created": "2017-03-21T16:09:28",
+      "date_created_gmt": "2017-03-21T19:09:28",
+      "date_modified": "2017-03-21T16:09:30",
+      "date_modified_gmt": "2017-03-21T19:09:30",
+      "email": "ronald@toolbone.com",
+      "first_name": "Ronald",
+      "last_name": "Bernardo",
+      "role": "customer",
+      "username": "john.doe",
+      "billing": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "company": "",
+        "address_1": "969 Market",
+        "address_2": "",
+        "city": "Singapore",
+        "state": "CA",
+        "postcode": "94103",
+        "country": "US",
+        "email": "john.doe@example.com",
+        "phone": "(555) 555-5555"
+      },
+      "shipping": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "company": "Toolbone",
+        "address_1": "000 Serangoon Avenue 4",
+        "address_2": "#14-50",
+        "city": "Singapore",
+        "state": "SG",
+        "postcode": "555555",
+        "country": "SG"
+      },
+      "is_paying_customer": false,
+      "avatar_url": "https://secure.gravatar.com/avatar/8eb1b522f60d11fa897de1dc6351b7e8?s=96",
+      "meta_data": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://example.com/wp-json/wc/v3/customers/25"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://example.com/wp-json/wc/v3/customers"
+          }
+        ]
+      }
+    }
+  ],
   "products": [
     {
       "id": 1,

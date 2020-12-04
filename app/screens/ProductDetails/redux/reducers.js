@@ -1,12 +1,6 @@
-/* Login Reducer
- * handles login states in the app
- * Reducers are functions that specify how the state changes based on a particular action.
- * Reducers intercept the actions created by the action creators and modify the application state accordingly.
- */
+/* Product Reducer */
 import createReducer from 'app/lib/createReducer';
 import * as types from '../../../system/types';
-import * as Models from '../../../api/Models';
-import { ProductsState } from '../../../api/Models';
 
 export const initialState = {
   product: {},

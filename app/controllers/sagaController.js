@@ -7,6 +7,7 @@ import * as loginActions from '../screens/Login/redux/actions';
 import * as rootActions from '../system/actions';
 import * as productListActions from '../screens/Home/redux/actions';
 import * as productDetailsActions from '../screens/ProductDetails/redux/actions';
+import * as customerDetailsActions from '../screens/Profile/redux/actions';
 import * as types from '../system/types';
 
 const StatusCode = Object.freeze({
@@ -15,7 +16,7 @@ const StatusCode = Object.freeze({
   ACCEPTED: 202,
   INVALID_CREDENTIALS: 400,
   BAD_REQUEST: 404,
-  BAD_GATEWAY: 502,
+  BAD_GATEWAY: 500,
   SERVICE_UNAVAILABLE: 503,
   TOO_MANY_REQUESTS: 429,
   NO_RESPONSE: 444,
@@ -38,6 +39,8 @@ export function* controlledStates(
       return yield onLoginRequest(response);
     case types.LOGOUT_REQUEST:
       return yield onLogoutRequest();
+    case types.CUSTOMER_DETAILS_REQUEST:
+      return yield onCustomerDetailsRequest(response);
     case types.PRODUCT_LIST_REQUEST:
       return yield onProductListRequest(response);
     case types.PRODUCT_DETAILS_REQUEST:
@@ -57,14 +60,19 @@ function* onLoginRequest(response) {
   //Set the store values for login
   let message = '';
   let isLoggedIn = false;
+  let userID = -1;
   switch (statusCode) {
     case StatusCode.SUCCESS:
     case StatusCode.CREATED:
       message = 'Personalizing...';
       isLoggedIn = true;
+      userID = response.data?.user?.data?.ID;
       break;
     case StatusCode.INVALID_CREDENTIALS:
       message = 'Sorry, Wrong user credentials';
+      break;
+    case StatusCode.BAD_GATEWAY:
+      message = 'Connection Issue';
       break;
     default:
       message = 'Please try again';
@@ -73,6 +81,7 @@ function* onLoginRequest(response) {
   return yield all([
     //isLoggedIn && fork(updateAuthHeader, response.data?.data?.jwt),
     isLoggedIn && put(productListActions.requestProductList(20)),
+    isLoggedIn && put(customerDetailsActions.requestCustomerDetails(userID)),
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
     put(rootActions.hideLoader()),
   ]);
@@ -80,6 +89,12 @@ function* onLoginRequest(response) {
 
 function* onLogoutRequest() {
   return yield all([put(loginActions.onLogoutResponse())]);
+}
+
+function* onCustomerDetailsRequest(response) {
+  return yield all([
+    put(customerDetailsActions.onCustomerDetailsResponse(response?.data)),
+  ]);
 }
 
 function* onProductListRequest(response) {
@@ -91,7 +106,6 @@ function* onProductListRequest(response) {
 
 function* onProductDetailsRequest(response) {
   //console.log('--->' + JSON.stringify(response));
-
   return yield all([
     put(rootActions.hideLoader()),
     put(productDetailsActions.onProductDetailsResponse(response?.data)),

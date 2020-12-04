@@ -16,9 +16,10 @@ server.use(
 
     '/wp-json/wc/v3/products?per_page=:per_page&orderby=:orderby':
       '/products?_start=0&_end=:per_page&_sort=:orderby&_order=desc',
-
     '/wp-json/wc/v3/products?per_page=:per_page':
       '/products?_start=0&_end=:per_page',
+
+    '/wp-json/wc/v3/customers/:id': '/customers/:id',
 
     '/wp-json/wc/v3/products/:id': '/products/:id',
   }),
@@ -26,6 +27,7 @@ server.use(
 //server.use(pause(2000));
 server.use((req, res, next) => {
   if (req.method === 'POST') {
+
     switch (req.url) {
       case '/authenticate':
         isAuthorised(req.body.username, req.body.password)

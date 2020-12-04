@@ -30,8 +30,8 @@ export default function Home() {
         <Chip
           style={styles.chip}
           icon="stairs"
-          onPress={() => dispatch(productListActions.requestProductList(5))}>
-          5
+          onPress={() => dispatch(productListActions.requestProductList(3))}>
+          3
         </Chip>
         <Chip
           style={styles.chip}
@@ -49,9 +49,9 @@ export default function Home() {
           style={styles.chip}
           icon="sort-alphabetical-variant"
           onPress={() =>
-            dispatch(productListActions.requestProductList(10, 'slug'))
+            dispatch(productListActions.requestProductList(20, 'slug'))
           }>
-          10
+          20
         </Chip>
       </View>
       <Divider />
