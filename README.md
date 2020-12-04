@@ -9,7 +9,7 @@ Uses the latest version of react-navigation (v5).
 This project also serves as a template for Wordpress + Woocommerce mobile app, which makes it more real-world project template!
 
 ## Screens
-<img src="/app/assets/img1.png" width="296" height="640">  <img src="/app/assets/img2.png" width="296" height="640"> <img src="/app/assets/img3.png" width="296" height="640"> <img src="/app/assets/img4.png" width="296" height="640">
+<img src="/app/assets/img1.png" width="148" height="320">  <img src="/app/assets/img2.png" width="148" height="320"> <img src="/app/assets/img3.png" width="148" height="320"> <img src="/app/assets/img4.png" width="148" height="320">
 
 ## Recently Build
  * [x] iOS
