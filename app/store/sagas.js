@@ -6,8 +6,9 @@
 import { all } from 'redux-saga/effects';
 import { loginSagas } from '../screens/Login/redux/sagas';
 import { productListSagas } from '../screens/Home/redux/sagas';
-import { productDetailsSagas } from '../screens/ProductDetails/redux/sagas';
+import { productDetailsSagas } from '../screens/Product/redux/sagas';
 import { profileSagas } from '../screens/Profile/redux/sagas';
+import { orderListSagas } from '../screens/Cart/redux/sagas';
 
 export default function* sagas() {
   yield all([
@@ -15,5 +16,6 @@ export default function* sagas() {
     ...productListSagas,
     ...productDetailsSagas,
     ...profileSagas,
+    ...orderListSagas,
   ]);
 }

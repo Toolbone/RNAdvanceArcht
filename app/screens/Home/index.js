@@ -10,7 +10,7 @@ import * as loginActions from '../Login/redux/actions';
 
 import { useDispatch } from 'react-redux';
 import * as rootActions from '../../system/actions';
-import * as productDetailsActions from '../ProductDetails/redux/actions';
+import * as productDetailsActions from '../Product/redux/actions';
 import { isEmpty } from 'ramda';
 import * as productListActions from './redux/actions';
 
@@ -68,7 +68,7 @@ export default function Home() {
                   dispatch(
                     productDetailsActions.requestProductDetails(product?.id),
                   );
-                  navigation.navigate('ProductDetails');
+                  navigation.navigate('Product');
                 }}>
                 <Image
                   style={styles.photo}

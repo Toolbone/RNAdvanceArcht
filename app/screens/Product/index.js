@@ -17,6 +17,40 @@ import { isEmpty } from 'ramda';
 
 export default function ProductDetails() {
   const product = useSelector((state) => state.productDetailsReducer.product);
+  const profile = useSelector((state) => state.customerDetailsReducer.profile);
+  console.log('--------------------------------------------->');
+  console.log(JSON.stringify(profile));
+  console.log('--------------------------------------------->');
+
+  const data = {
+    payment_method: 'bacs',
+    payment_method_title: 'Direct Bank Transfer',
+    set_paid: false,
+    customer_id: profile?.id,
+    billing: profile?.billing,
+    shipping: profile?.shipping,
+    line_items: [
+      {
+        product_id: 93,
+        quantity: 2,
+      },
+      {
+        product_id: 22,
+        variation_id: 23,
+        quantity: 1,
+      },
+    ],
+    shipping_lines: [
+      {
+        method_id: 'flat_rate',
+        method_title: 'Flat Rate',
+        total: '10.00',
+      },
+    ],
+  };
+  console.log('-->>------------------------------------------->');
+  console.log(JSON.stringify(data?.billing));
+  console.log('-->>------------------------------------------->');
 
   return product === undefined || isEmpty(product) ? (
     <View style={styles.center}>

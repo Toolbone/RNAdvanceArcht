@@ -62,8 +62,29 @@ export function fetchProductDetail(id) {
     .catch((error) => ({ error }));
 }
 
+export function fetchOrderList(customerId, paymentStatus) {
+  let params = {
+    customer: customerId,
+    status: paymentStatus,
+  };
+
+  return RemoteData.get(ApiConstants.PRODUCT_ORDER, params)
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => ({ error }));
+}
+
+export function deleteOrderList(id) {
+  return RemoteData.delete(ApiConstants.PRODUCT_ORDER + '/' + id, {
+    force: true,
+  })
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => ({ error }));
+}
+
 export function deleteProductOrder(id) {
-  return RemoteData.delete(ApiConstants.PRODUCT_DETAIL + '/' + id, {
+  return RemoteData.remove(ApiConstants.PRODUCT_DETAIL + '/' + id, {
     force: true,
   })
     .then((response) => ({ response }))

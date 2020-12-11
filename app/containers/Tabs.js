@@ -13,9 +13,12 @@ import Setting from '../screens/Setting';
 import About from '../screens/About';
 import Profile from '../screens/Profile';
 import Home from '../screens/Home';
+import { useNavigation } from '@react-navigation/native';
+
 const Tab = createMaterialBottomTabNavigator();
 
 function Tabs() {
+  const navigation = useNavigation();
   const isFocused = useIsFocused();
   const safeArea = useSafeArea();
   let tabBarProps = {};
@@ -67,6 +70,9 @@ function Tabs() {
           icon="cart"
           small={true}
           label={'Cart'}
+          onPress={() => {
+            navigation.navigate('Cart');
+          }}
           style={[
             styles.fab,
             {

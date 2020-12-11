@@ -9,8 +9,8 @@ import { isEmpty } from 'ramda';
 
 export default function Login() {
   // remove these initial assignments after testing
-  const [username, setUsername] = useState('github');
-  const [password, setPassword] = useState('^ZG78@aRLqT6Cjn1Bx8jEskE');
+  const [username, setUsername] = useState('customer');
+  const [password, setPassword] = useState('%PsqQW5xEC(kixz5wzb6zVgO');
 
   const isRequesting = useSelector((state) => state.loginReducer.isRequesting);
   const message = useSelector((state) => state.loginReducer.message);

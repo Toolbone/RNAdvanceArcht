@@ -110,3 +110,4 @@ export interface ProductsState {
   refreshing: boolean;
   page: number;
 }
+

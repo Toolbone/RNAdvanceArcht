@@ -12,7 +12,8 @@ import { StyleSheet, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 import Loader from '../components/Loader';
 import * as loginActions from '../screens/Login/redux/actions';
-import ProductDetails from 'app/screens/ProductDetails';
+import Product from 'app/screens/Product';
+import Cart from 'app/screens/Cart';
 
 const Stack = createStackNavigator();
 
@@ -100,8 +101,21 @@ export default function App() {
           />
         )}
         <Stack.Screen
-          name="ProductDetails"
-          component={ProductDetails}
+          name="Product"
+          component={Product}
+          options={{
+            title: '',
+            headerShown: true,
+            headerBackTitleVisible: false,
+            transitionSpec: {
+              open: transitionSpec,
+              close: transitionSpec,
+            },
+          }}
+        />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
           options={{
             title: '',
             headerShown: true,

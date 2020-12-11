@@ -4,9 +4,9 @@ export const env = {
   //BASE_URL: 'http://localhost:3000',
   //BASE_URL_SECURE: 'http://localhost:3000',
 
-  BASE_URL: 'http://www.toolbone.com/loginme',
-  BASE_URL_SECURE: 'https://www.toolbone.com/loginme',
+  BASE_URL: 'http://www.toolbone.com/rnstore',
+  BASE_URL_SECURE: 'https://www.toolbone.com/rnstore',
 
-  KEY: 'ck_a10c86e6562e59a8d934213b4476fa6e478da8e3',
-  SECRET: 'cs_801a3b83422cbba8d5d4feaa6811fd8fde5a1ade',
+  KEY: 'ck_384441b2723ebfd81993286426c6569fb3c11134',
+  SECRET: 'cs_ce292e6048564baa746f60f186b53a2f66c7fa28',
 };

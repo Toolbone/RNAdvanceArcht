@@ -6,8 +6,9 @@ import { all, put, fork } from 'redux-saga/effects';
 import * as loginActions from '../screens/Login/redux/actions';
 import * as rootActions from '../system/actions';
 import * as productListActions from '../screens/Home/redux/actions';
-import * as productDetailsActions from '../screens/ProductDetails/redux/actions';
+import * as productDetailsActions from '../screens/Product/redux/actions';
 import * as customerDetailsActions from '../screens/Profile/redux/actions';
+import * as orderListActions from '../screens/Cart/redux/actions';
 import * as types from '../system/types';
 
 const StatusCode = Object.freeze({
@@ -47,6 +48,8 @@ export function* controlledStates(
       return yield onProductDetailsRequest(response);
     case types.CUSTOMER_DETAILS_UPDATE:
       return yield onCustomerDetailUpdate(response);
+    case types.ORDER_LIST_REQUEST:
+      return yield onOrderListRequest(response);
     default:
       return;
   }
@@ -84,6 +87,7 @@ function* onLoginRequest(response) {
     //isLoggedIn && fork(updateAuthHeader, response.data?.data?.jwt),
     isLoggedIn && put(productListActions.requestProductList(20)),
     isLoggedIn && put(customerDetailsActions.requestCustomerDetails(userID)),
+    isLoggedIn && put(orderListActions.requestOrderList(userID, 'pending')),
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
     put(rootActions.hideLoader()),
   ]);
@@ -119,4 +123,9 @@ function* onCustomerDetailUpdate(response) {
     put(rootActions.hideLoader()),
     put(customerDetailsActions.onCustomerDetailsResponse(response?.data)),
   ]);
+}
+
+function* onOrderListRequest(response) {
+  console.log(JSON.stringify(response));
+  return yield all([put(orderListActions.onOrderListResponse(response?.data))]);
 }

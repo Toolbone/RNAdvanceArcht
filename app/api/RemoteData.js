@@ -58,6 +58,16 @@ const put = async (path: string, data?: any): Promise<AxiosResponse> => {
   return client.request(config);
 };
 
+const remove = async (path: string, data?: any): Promise<AxiosResponse> => {
+  const config = {
+    url: `${Config.env.BASE_URL_SECURE}${path}`,
+    baseURL: Config.env.BASE_URL_SECURE,
+    method: 'DELETE',
+    data: data,
+  };
+  return client.request(config);
+};
+
 export const updateAuthHeader = (token) => {
   client.defaults.headers.common = {
     Authorization: 'Bearer ' + token,
@@ -69,4 +79,5 @@ export default {
   get,
   post,
   put,
+  remove,
 };
