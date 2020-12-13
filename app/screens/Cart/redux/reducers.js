@@ -31,4 +31,19 @@ export const orderListReducer = createReducer(initialState, {
       id: action.id,
     };
   },
+  [types.ORDER_LIST_ADD](state, action) {
+    console.log('WHATS INSIDE' + JSON.stringify(action));
+    return {
+      ...state,
+      data: action.data,
+    };
+  },
+  [types.ORDER_LIST_UPDATE](state, action) {
+    console.log('WHATS INSIDE' + JSON.stringify(action));
+    return {
+      ...state,
+      id: action.id,
+      data: action.data,
+    };
+  },
 });

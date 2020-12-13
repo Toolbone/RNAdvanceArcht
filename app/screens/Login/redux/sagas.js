@@ -32,6 +32,7 @@ export function* loginRequestAsync(action) {
 }
 
 export function* logoutRequestAsync(action) {
+  console.log('-------------->' + action.token + '<-----------------');
   const { response, error } = yield call(logoutUser, action.token);
 
   if (R.isNil(error)) {

@@ -28,11 +28,11 @@ export function onLoginResponse(response, message, isLoggedIn) {
   };
 }
 
-export function requestLogout(message?) {
+export function requestLogout(token) {
   return {
     type: types.LOGOUT_REQUEST,
-    token: '',
-    message: message,
+    token: token,
+    message: '',
     username: '',
     password: '',
     isRequesting: false,

@@ -18,9 +18,6 @@ export default function Login() {
   const dispatch = useDispatch();
   const isUsingEmail = false;
 
-  /*  const showLoader = useCallback(() => dispatch(rootActions.showLoader()), [
-    dispatch,
-  ]);*/
   const loginRequest = useCallback(
     () => dispatch(loginActions.requestLogin(username, password)),
     [dispatch, password, username],

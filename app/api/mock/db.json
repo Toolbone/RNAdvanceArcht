@@ -17,6 +17,9 @@
       "token_expires": 1607000924
     }
   },
+  "revoke": {
+    "message": "Token revoked successfully"
+  },
   "validUsers": [
     {
       "username": "github",
@@ -24,8 +27,8 @@
       "issueJWT": true
     },
     {
-      "username": "123",
-      "password": "123",
+      "username": "customer",
+      "password": "%PsqQW5xEC(kixz5wzb6zVgO",
       "issueJWT": true
     }
   ],
@@ -3933,6 +3936,126 @@
         "collection": [
           {
             "href": "http://www.toolbone.com/loginme/wp-json/wc/v3/products"
+          }
+        ]
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": 73,
+      "parent_id": 0,
+      "number": "73",
+      "order_key": "wc_order_7vaezBDRoM1cS",
+      "created_via": "rest-api",
+      "version": "4.8.0",
+      "status": "pending",
+      "currency": "USD",
+      "date_created": "2020-12-13T11:15:19",
+      "date_created_gmt": "2020-12-13T11:15:19",
+      "date_modified": "2020-12-13T11:15:19",
+      "date_modified_gmt": "2020-12-13T11:15:19",
+      "discount_total": "0.00",
+      "discount_tax": "0.00",
+      "shipping_total": "0.00",
+      "shipping_tax": "0.00",
+      "cart_tax": "0.00",
+      "total": "400.00",
+      "total_tax": "0.00",
+      "prices_include_tax": false,
+      "customer_id": 25,
+      "customer_ip_address": "",
+      "customer_user_agent": "",
+      "customer_note": "",
+      "billing": {
+        "first_name": "Ronald",
+        "last_name": "Bernardo",
+        "company": "Alphatron Asia",
+        "address_1": "50 Lorong 40 Geylang Road",
+        "address_2": "Sunny Spring",
+        "city": "Singapore",
+        "state": "",
+        "postcode": "398074",
+        "country": "SG",
+        "email": "ronaldgarciabernardo@gmail.com",
+        "phone": "+6500000000"
+      },
+      "shipping": {
+        "first_name": "Ronald",
+        "last_name": "Bernardo",
+        "company": "Alphatron Asia",
+        "address_1": "50 Lorong 40 Geylang Road",
+        "address_2": "Sunny Spring",
+        "city": "Singapore",
+        "state": "",
+        "postcode": "398074",
+        "country": "SG"
+      },
+      "payment_method": "bacs",
+      "payment_method_title": "Direct Bank Transfer",
+      "transaction_id": "",
+      "date_paid": null,
+      "date_paid_gmt": null,
+      "date_completed": null,
+      "date_completed_gmt": null,
+      "cart_hash": "",
+      "meta_data": [],
+      "line_items": [
+        {
+          "id": 50,
+          "name": "Product Nine",
+          "product_id": 1,
+          "variation_id": 0,
+          "quantity": 1,
+          "tax_class": "",
+          "subtotal": "200.00",
+          "subtotal_tax": "0.00",
+          "total": "200.00",
+          "total_tax": "0.00",
+          "taxes": [],
+          "meta_data": [],
+          "sku": "",
+          "price": 200,
+          "parent_name": null
+        },
+        {
+          "id": 51,
+          "name": "Product Nine",
+          "product_id": 2,
+          "variation_id": 0,
+          "quantity": 1,
+          "tax_class": "",
+          "subtotal": "200.00",
+          "subtotal_tax": "0.00",
+          "total": "200.00",
+          "total_tax": "0.00",
+          "taxes": [],
+          "meta_data": [],
+          "sku": "",
+          "price": 200,
+          "parent_name": null
+        }
+      ],
+      "tax_lines": [],
+      "shipping_lines": [],
+      "fee_lines": [],
+      "coupon_lines": [],
+      "refunds": [],
+      "currency_symbol": "$",
+      "_links": {
+        "self": [
+          {
+            "href": "https://www.toolbone.com/rnstore/wp-json/wc/v3/orders/73"
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://www.toolbone.com/rnstore/wp-json/wc/v3/orders"
+          }
+        ],
+        "customer": [
+          {
+            "href": "https://www.toolbone.com/rnstore/wp-json/wc/v3/customers/2"
           }
         ]
       }

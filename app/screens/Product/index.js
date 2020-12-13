@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
-import { Text, Button } from 'react-native-paper';
+import { Image, ScrollView, TouchableOpacity, View } from 'react-native';
+import { Text } from 'react-native-paper';
 import styles from './styles';
-import { useSelector } from 'react-redux';
-import { removeHtmlTag, currencyFormat } from '../../utils/stringUtils';
-
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Image,
-  Alert,
-  ScrollView,
-  FlatList,
-} from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
+import { currencyFormat, removeHtmlTag } from '../../utils/stringUtils';
+import React, { useCallback } from 'react';
 import { isEmpty } from 'ramda';
+import * as orderListActions from '../Cart/redux/actions';
+import * as rootActions from '../../system/actions';
 
 export default function ProductDetails() {
+  const dispatch = useDispatch();
+
   const product = useSelector((state) => state.productDetailsReducer.product);
   const profile = useSelector((state) => state.customerDetailsReducer.profile);
-  console.log('--------------------------------------------->');
-  console.log(JSON.stringify(profile));
-  console.log('--------------------------------------------->');
+  const orderList = useSelector((state) => state.orderListReducer.orders);
+
+  const lineItems = [];
+  const orderId = orderList[0]?.id;
+
+  const isCartReady = orderList.length > 0;
 
   const data = {
     payment_method: 'bacs',
@@ -29,30 +27,25 @@ export default function ProductDetails() {
     customer_id: profile?.id,
     billing: profile?.billing,
     shipping: profile?.shipping,
-    line_items: [
-      {
-        product_id: 93,
-        quantity: 2,
-      },
-      {
-        product_id: 22,
-        variation_id: 23,
-        quantity: 1,
-      },
-    ],
-    shipping_lines: [
-      {
-        method_id: 'flat_rate',
-        method_title: 'Flat Rate',
-        total: '10.00',
-      },
-    ],
   };
-  console.log('-->>------------------------------------------->');
-  console.log(JSON.stringify(data?.billing));
-  console.log('-->>------------------------------------------->');
 
-  return product === undefined || isEmpty(product) ? (
+  const addItem = useCallback(() => {
+    lineItems.push({
+      product_id: product?.id,
+      quantity: 1,
+    });
+    dispatch(
+      orderListActions.updateOrderList(orderId, {
+        line_items: lineItems,
+      }),
+    );
+  }, [dispatch, lineItems, orderId, product.id]);
+
+  if (!isCartReady) {
+    dispatch(orderListActions.addOrderList(data));
+  }
+
+  return isEmpty(product) ? (
     <View style={styles.center}>
       <Text> No Item Found </Text>
     </View>
@@ -111,7 +104,11 @@ export default function ProductDetails() {
         </View>
         <View style={styles.separator} />
         <View style={styles.addToCarContainer}>
-          <TouchableOpacity style={styles.shareButton} onPress={() => {}}>
+          <TouchableOpacity
+            style={isCartReady ? styles.activeButton : styles.inactiveButton}
+            onPress={() => {
+              addItem();
+            }}>
             <Text style={styles.shareButtonText}>Add To Cart</Text>
           </TouchableOpacity>
         </View>

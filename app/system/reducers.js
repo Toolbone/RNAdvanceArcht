@@ -8,6 +8,7 @@ import * as types from 'app/system/types';
 const initialState = {
   type: types.DISABLE_LOADER,
   isLoading: false,
+  totalLoaded: 0,
 };
 
 export const rootReducer = createReducer(initialState, {
@@ -15,19 +16,14 @@ export const rootReducer = createReducer(initialState, {
     return {
       ...state,
       isLoading: action.isLoading,
+      totalLoaded: state.totalLoaded + action.totalLoaded,
     };
   },
   [types.DISABLE_LOADER](state, action) {
     return {
       ...state,
-      isLoading: action.isLoading,
-    };
-  },
-
-  [types.ENABLE_LOADER](state, action) {
-    return {
-      ...state,
-      isLoading: action.isLoading,
+      isLoading: state.totalLoaded - action.totalLoaded !== 0,
+      totalLoaded: state.totalLoaded - action.totalLoaded,
     };
   },
 });

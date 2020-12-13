@@ -27,6 +27,7 @@ export default function Profile() {
   const iconColor = edit ? '#00aa00' : '#555555';
 
   const data = {
+    first_name: profile?.first_name,
     billing: {
       phone: phone,
     },
@@ -37,10 +38,7 @@ export default function Profile() {
   };
 
   const profileUpdate = useCallback(
-    () => [
-      dispatch(profileActions.updateCustomerDetails(profile?.id, data)),
-      dispatch(rootActions.showLoader()),
-    ],
+    () => [dispatch(profileActions.updateCustomerDetails(profile?.id, data))],
     [dispatch, data, profile.id],
   );
 

@@ -22,12 +22,16 @@ server.use(
     '/wp-json/wc/v3/customers/:id': '/customers/:id',
 
     '/wp-json/wc/v3/products/:id': '/products/:id',
+
+    '/wp-json/wc/v3/orders?customer=:id&status=:status':
+      '/orders?customer_id_like=:id&status_like=:status',
+
+    '/wp-json/wc/v3/orders/:id': '/orders/:id',
   }),
 );
 //server.use(pause(2000));
 server.use((req, res, next) => {
   if (req.method === 'POST') {
-
     switch (req.url) {
       case '/authenticate':
         isAuthorised(req.body.username, req.body.password)
@@ -36,7 +40,9 @@ server.use((req, res, next) => {
         break;
 
       case '/revoke':
-        console.log('Hello!');
+        next();
+        break;
+      case '/orders':
         next();
         break;
       default:
@@ -45,6 +51,8 @@ server.use((req, res, next) => {
         break;
     }
   } else if (req.method === 'GET') {
+    next();
+  } else if (req.method === 'PUT') {
     next();
   } else {
     next();

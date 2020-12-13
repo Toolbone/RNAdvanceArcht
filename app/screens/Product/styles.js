@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginHorizontal: 30,
   },
-  shareButton: {
+  activeButton: {
     marginTop: 10,
     height: 45,
     flexDirection: 'row',
@@ -85,6 +85,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 30,
     backgroundColor: '#00BFFF',
+  },
+  inactiveButton: {
+    marginTop: 10,
+    height: 45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 30,
+    backgroundColor: '#999999',
   },
   shareButtonText: {
     color: '#FFFFFF',

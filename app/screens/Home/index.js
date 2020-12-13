@@ -64,7 +64,6 @@ export default function Home() {
                 style={styles.photo}
                 onStartShouldSetResponder={() => true}
                 onResponderRelease={() => {
-                  dispatch(rootActions.showLoader());
                   dispatch(
                     productDetailsActions.requestProductDetails(product?.id),
                   );

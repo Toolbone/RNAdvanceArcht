@@ -75,12 +75,26 @@ export function fetchOrderList(customerId, paymentStatus) {
 }
 
 export function deleteOrderList(id) {
-  return RemoteData.delete(ApiConstants.PRODUCT_ORDER + '/' + id, {
+  return RemoteData.remove(ApiConstants.PRODUCT_ORDER + '/' + id, {
     force: true,
   })
     .then((response) => ({ response }))
     .then((json) => json)
     .catch((error) => ({ error }));
+}
+
+export function addOrderList(data) {
+  return RemoteData.post(ApiConstants.PRODUCT_ORDER, null, data)
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => error);
+}
+
+export function updateOrderList(id, data) {
+  return RemoteData.put(ApiConstants.PRODUCT_ORDER + '/' + id, data)
+    .then((response) => ({ response }))
+    .then((json) => json)
+    .catch((error) => error);
 }
 
 export function deleteProductOrder(id) {

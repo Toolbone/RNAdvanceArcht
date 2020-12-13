@@ -2,7 +2,7 @@
 //We will aim to cover/handle all possible error either propagating error to the user or recovering from anticipated error.
 //This acts as our centralise error handling mechanism which enables easily migrate our error handling to a centralise SDK.
 
-import { all, put, fork } from 'redux-saga/effects';
+import { all, put, fork, select } from 'redux-saga/effects';
 import * as loginActions from '../screens/Login/redux/actions';
 import * as rootActions from '../system/actions';
 import * as productListActions from '../screens/Home/redux/actions';
@@ -10,6 +10,7 @@ import * as productDetailsActions from '../screens/Product/redux/actions';
 import * as customerDetailsActions from '../screens/Profile/redux/actions';
 import * as orderListActions from '../screens/Cart/redux/actions';
 import * as types from '../system/types';
+import * as loginSelector from '../screens/Login/redux/selectors';
 
 const StatusCode = Object.freeze({
   SUCCESS: 200,
@@ -50,6 +51,12 @@ export function* controlledStates(
       return yield onCustomerDetailUpdate(response);
     case types.ORDER_LIST_REQUEST:
       return yield onOrderListRequest(response);
+    case types.ORDER_LIST_DELETE:
+      return yield onOrderListDelete(response);
+    case types.ORDER_LIST_ADD:
+      return yield onOrderListAdd(response);
+    case types.ORDER_LIST_UPDATE:
+      return yield onOrderListUpdate(response);
     default:
       return;
   }
@@ -89,7 +96,6 @@ function* onLoginRequest(response) {
     isLoggedIn && put(customerDetailsActions.requestCustomerDetails(userID)),
     isLoggedIn && put(orderListActions.requestOrderList(userID, 'pending')),
     put(loginActions.onLoginResponse(response, message, isLoggedIn)),
-    put(rootActions.hideLoader()),
   ]);
 }
 
@@ -104,28 +110,40 @@ function* onCustomerDetailsRequest(response) {
 }
 
 function* onProductListRequest(response) {
-  console.log(JSON.stringify(response));
   return yield all([
     put(productListActions.onProductListResponse(response?.data)),
   ]);
 }
 
 function* onProductDetailsRequest(response) {
-  //console.log('--->' + JSON.stringify(response));
+  const userID = yield select(loginSelector.userId);
   return yield all([
-    put(rootActions.hideLoader()),
     put(productDetailsActions.onProductDetailsResponse(response?.data)),
+    put(orderListActions.requestOrderList(userID, 'pending')),
   ]);
 }
 
 function* onCustomerDetailUpdate(response) {
   return yield all([
-    put(rootActions.hideLoader()),
     put(customerDetailsActions.onCustomerDetailsResponse(response?.data)),
   ]);
 }
 
 function* onOrderListRequest(response) {
-  console.log(JSON.stringify(response));
   return yield all([put(orderListActions.onOrderListResponse(response?.data))]);
+}
+
+function* onOrderListAdd(response) {
+  const userID = yield select(loginSelector.userId);
+  return yield all([put(orderListActions.requestOrderList(userID, 'pending'))]);
+}
+
+function* onOrderListUpdate(response) {
+  const userID = yield select(loginSelector.userId);
+  return yield all([put(orderListActions.requestOrderList(userID, 'pending'))]);
+}
+
+function* onOrderListDelete(response) {
+  const userID = yield select(loginSelector.userId);
+  return yield all([put(orderListActions.requestOrderList(userID, 'pending'))]);
 }

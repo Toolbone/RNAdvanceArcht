@@ -12,13 +12,16 @@ const styles = StyleSheet.create({
     padding: 4,
   },
   headerText: {
-    fontSize: 16,
+    fontSize: 20,
   },
-  rightContainer: {
+  headerContainer: {
     marginTop: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 10,
   },
   listContainer: {
-    marginTop: 50,
+    marginTop: 0,
   },
   item: {
     height: 100,
@@ -31,13 +34,21 @@ const styles = StyleSheet.create({
   },
 
   deleteContainer: {
-    flex: 3,
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    padding: 4,
+    padding: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 40,
+    marginTop: 20,
   },
   deleteButton: {
-    marginLeft: 20,
+    marginLeft: 0,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   deleteIcon: {
     backgroundColor: 'rgba(0,0,0,0.0)',
