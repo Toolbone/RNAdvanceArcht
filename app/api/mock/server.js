@@ -51,7 +51,6 @@ server.use((req, res, next) => {
         addOrder(req, res);
         break;
       default:
-        console.log('Hello! POST Others');
         //next();
         break;
     }
@@ -60,14 +59,12 @@ server.use((req, res, next) => {
   } else if (req.method === 'PUT') {
     switch (req.url) {
       case '/orders/' + db.dummyOrder.id:
-        console.log('Orders add cart!');
         addCartItem(req, res);
         break;
       case '--':
         next();
         break;
       default:
-        console.log('Hello! PUT Others');
         next();
         break;
     }
@@ -87,6 +84,10 @@ function isAuthorised(username, password) {
 function addOrder(req, res) {
   const lowDB = router.db; // Assign the lowdb instance
   const table = lowDB.get('orders');
+
+  // Clear all first
+  table.find({ id: db.dummyOrder.id }).assign({ line_items: [] }).write();
+
   // Create a new entry if this ID does not exist
   if (_.isEmpty(table.find({ id: db.dummyOrder.id }).value())) {
     table.push(db.dummyOrder).write(); //db.dummyOrder is a cart template in this scenario
@@ -98,9 +99,13 @@ function addCartItem(req, res) {
   const lowDB = router.db; // Assign the lowdb instance
   const table = lowDB.get('orders');
 
+  const currentCart = table.find({ id: db.dummyOrder.id });
+  const cartItems = currentCart.value().line_items;
+  cartItems.push(req.body.line_items[0]);
+
   table
     .find({ id: db.dummyOrder.id })
-    .assign({ line_items: req.body.line_items })
+    .assign({ line_items: cartItems })
     .write();
 
   return res.status(200).json(db.orders);
