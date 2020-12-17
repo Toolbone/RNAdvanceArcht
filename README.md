@@ -131,7 +131,7 @@ Extra tool commands for gitif you want to push your local files to remote files
      * [X] Product List
      * [X] Product Detail
      * [X] Profile Detail With Editable Fields
-     * [ ] Cart and Item List
+     * [X] Cart and Item List
  * [X] Use JSON-Server for API mock
  * [ ] Unit Tests   
  * [X] Clean UI
