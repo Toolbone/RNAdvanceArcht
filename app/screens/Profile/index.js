@@ -26,16 +26,10 @@ export default function Profile() {
   const iconMode = edit ? 'content-save' : 'account-edit';
   const iconColor = edit ? '#00aa00' : '#555555';
 
-  const data = {
-    first_name: profile?.first_name,
-    billing: {
-      phone: phone,
-    },
-    shipping: {
-      address_1: address1,
-      address_2: address2,
-    },
-  };
+  const data = profile;
+  data.billing.phone = phone;
+  data.shipping.address_1 = address1;
+  data.shipping.address_2 = address2;
 
   const profileUpdate = useCallback(
     () => [dispatch(profileActions.updateCustomerDetails(profile?.id, data))],
